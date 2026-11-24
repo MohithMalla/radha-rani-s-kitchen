@@ -16,11 +16,9 @@ export default function Menu() {
 
   // Sync category state with URL parameter if it changes
   useEffect(() => {
-    const cat = searchParams.get('category');
-    if (cat && cat !== selectedCategory) {
-      setSelectedCategory(cat);
-      setVisibleCount(12);
-    }
+    const cat = searchParams.get('category') || 'all';
+    setSelectedCategory(cat);
+    setVisibleCount(12);
   }, [searchParams]);
 
   const handleCategoryChange = (catId) => {

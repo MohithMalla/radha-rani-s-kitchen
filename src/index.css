@@ -25,6 +25,26 @@
   }
 }
 
+/* Seamless infinite horizontal marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
 /* Custom traditional decorative border styles & vintage frame */
 .vintage-border {
   border: 2px solid #6B0F1A;
