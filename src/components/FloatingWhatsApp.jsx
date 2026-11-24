@@ -11,10 +11,10 @@ export default function FloatingWhatsApp() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex items-end gap-3 flex-col sm:flex-row">
-      {/* Tooltip greeting */}
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex items-end gap-2.5 flex-col sm:flex-row">
+      {/* Tooltip greeting (hidden on very small mobile to save screen real estate) */}
       {showTooltip && (
-        <div className="bg-white text-stone-800 text-xs px-3.5 py-2 rounded-xl shadow-xl border border-amber-200 hidden sm:flex items-center gap-2 animate-bounce animate-duration-1000">
+        <div className="bg-white text-stone-800 text-xs px-3.5 py-2 rounded-xl shadow-xl border border-amber-200 hidden md:flex items-center gap-2 animate-bounce animate-duration-1000">
           <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
           <span>Order or Enquire on <strong>WhatsApp</strong>!</span>
           <button 
@@ -33,11 +33,11 @@ export default function FloatingWhatsApp() {
       {/* WhatsApp Button with authentic WhatsApp icon */}
       <button
         onClick={handleClick}
-        className="group relative flex items-center justify-center w-14 h-14 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-full shadow-2xl hover:shadow-green-500/50 transition-all duration-300 transform hover:scale-110 active:scale-95 focus:outline-none"
+        className="group relative flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 bg-whatsapp hover:bg-whatsapp-hover text-white rounded-full shadow-2xl hover:shadow-green-500/50 transition-all duration-300 transform hover:scale-110 active:scale-95 focus:outline-none"
         aria-label="Chat on WhatsApp with Radha Rani's Kitchen"
       >
         <span className="absolute inset-0 rounded-full bg-whatsapp opacity-75 animate-ping -z-10 group-hover:opacity-100"></span>
-        <WhatsAppIcon className="w-8 h-8 fill-white" />
+        <WhatsAppIcon className="w-6 h-6 sm:w-8 sm:h-8 fill-white" />
       </button>
     </div>
   );

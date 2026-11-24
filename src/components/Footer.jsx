@@ -23,60 +23,60 @@ export default function Footer() {
       {/* Subtle traditional pattern overlay */}
       <div className="absolute inset-0 opacity-5 bg-[radial-gradient(#D4A017_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
 
-      {/* Trust Banner inside footer */}
-      <div className="border-b border-maroon-800 bg-maroon-800/60 py-6 px-4">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+      {/* Trust Banner inside footer - 2 cols on mobile, 4 on tablet/desktop */}
+      <div className="border-b border-maroon-800 bg-maroon-800/60 py-5 sm:py-6 px-3 sm:px-4">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 text-center">
           <div className="flex flex-col items-center">
-            <span className="w-10 h-10 rounded-full bg-gold-500/20 text-gold-300 flex items-center justify-center mb-2">
-              <span className="w-4 h-4 rounded-full border-2 border-emerald-400 bg-emerald-500"></span>
+            <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gold-500/20 text-gold-300 flex items-center justify-center mb-1.5 sm:mb-2">
+              <span className="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full border-2 border-emerald-400 bg-emerald-500"></span>
             </span>
-            <span className="font-semibold text-white text-sm">100% Pure Veg</span>
-            <span className="text-xs text-stone-300">Telugu Sattvic Kitchen</span>
+            <span className="font-semibold text-white text-xs sm:text-sm">100% Pure Veg</span>
+            <span className="text-[10px] sm:text-xs text-stone-300">Telugu Sattvic Kitchen</span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="w-10 h-10 rounded-full bg-gold-500/20 text-gold-300 flex items-center justify-center mb-2">
-              <ShieldCheck className="w-5 h-5 text-gold-400" />
+            <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gold-500/20 text-gold-300 flex items-center justify-center mb-1.5 sm:mb-2">
+              <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-gold-400" />
             </span>
-            <span className="font-semibold text-white text-sm">Strict Hygiene</span>
-            <span className="text-xs text-stone-300">Clean RO Water &amp; Oils</span>
+            <span className="font-semibold text-white text-xs sm:text-sm">Strict Hygiene</span>
+            <span className="text-[10px] sm:text-xs text-stone-300">Clean RO Water &amp; Oils</span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="w-10 h-10 rounded-full bg-gold-500/20 text-gold-300 flex items-center justify-center mb-2">
-              <CheckCircle2 className="w-5 h-5 text-gold-400" />
+            <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gold-500/20 text-gold-300 flex items-center justify-center mb-1.5 sm:mb-2">
+              <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-gold-400" />
             </span>
-            <span className="font-semibold text-white text-sm">Fresh Everyday</span>
-            <span className="text-xs text-stone-300">Zero Artificial Preservatives</span>
+            <span className="font-semibold text-white text-xs sm:text-sm">Fresh Everyday</span>
+            <span className="text-[10px] sm:text-xs text-stone-300">Zero Preservatives</span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="w-10 h-10 rounded-full bg-gold-500/20 text-gold-300 flex items-center justify-center mb-2">
-              <Sparkles className="w-5 h-5 text-gold-400" />
+            <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gold-500/20 text-gold-300 flex items-center justify-center mb-1.5 sm:mb-2">
+              <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-gold-400" />
             </span>
-            <span className="font-semibold text-white text-sm">Heritage Taste</span>
-            <span className="text-xs text-stone-300">Authentic Family Recipes</span>
+            <span className="font-semibold text-white text-xs sm:text-sm">Heritage Taste</span>
+            <span className="text-[10px] sm:text-xs text-stone-300">Family Recipes</span>
           </div>
         </div>
       </div>
 
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-16 relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
           
-          {/* Col 1: Brand Logo Only - Balanced & Professional */}
-          <div className="space-y-4">
+          {/* Col 1: Brand Logo & Mission */}
+          <div className="space-y-3 sm:space-y-4">
             <div className="inline-block bg-white/95 p-2 rounded-2xl shadow-lg border border-gold-300">
               <img 
                 src="/logo.png" 
                 alt="Radha Rani's Kitchen" 
-                className="h-16 sm:h-18 md:h-20 w-auto object-contain"
+                className="h-14 sm:h-16 md:h-18 w-auto object-contain"
               />
             </div>
-            <p className="text-gold-400 text-sm font-medium italic">
+            <p className="text-gold-400 text-xs sm:text-sm font-medium italic">
               "{BUSINESS_INFO.tagline}"
             </p>
             <p className="text-xs text-stone-300 leading-relaxed">
               Warangal's beloved homegrown kitchen dedicated to bringing authentic Telugu flavours, wholesome wholesale rotis, sacred prasadams, and festival sweets crafted with pure ingredients and traditional care.
             </p>
-            <div className="pt-2">
+            <div className="pt-1">
               <a 
                 href={BUSINESS_INFO.instagramUrl} 
                 target="_blank" 
@@ -91,10 +91,10 @@ export default function Footer() {
 
           {/* Col 2: Quick Links */}
           <div>
-            <h4 className="font-serif text-lg font-bold text-gold-300 border-b border-maroon-600 pb-2 mb-4 tracking-wide">
+            <h4 className="font-serif text-base sm:text-lg font-bold text-gold-300 border-b border-maroon-600 pb-2 mb-3 sm:mb-4 tracking-wide">
               Quick Navigation
             </h4>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2 text-xs sm:text-sm">
               <li>
                 <Link to="/" className="hover:text-gold-300 transition-colors flex items-center gap-2">
                   <span className="text-gold-500">›</span> Home
@@ -130,7 +130,7 @@ export default function Footer() {
 
           {/* Col 3: Core Services Categories */}
           <div>
-            <h4 className="font-serif text-lg font-bold text-gold-300 border-b border-maroon-600 pb-2 mb-4 tracking-wide">
+            <h4 className="font-serif text-base sm:text-lg font-bold text-gold-300 border-b border-maroon-600 pb-2 mb-3 sm:mb-4 tracking-wide">
               Our 7 Specialties
             </h4>
             <ul className="space-y-2 text-xs">
@@ -150,40 +150,40 @@ export default function Footer() {
 
           {/* Col 4: Contact & Kitchen Timings */}
           <div>
-            <h4 className="font-serif text-lg font-bold text-gold-300 border-b border-maroon-600 pb-2 mb-4 tracking-wide">
+            <h4 className="font-serif text-base sm:text-lg font-bold text-gold-300 border-b border-maroon-600 pb-2 mb-3 sm:mb-4 tracking-wide">
               Kitchen &amp; Order Enquiries
             </h4>
-            <div className="space-y-3 text-xs text-stone-300">
-              <div className="flex items-start gap-2.5">
+            <div className="space-y-2.5 sm:space-y-3 text-xs text-stone-300">
+              <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-gold-400 shrink-0 mt-0.5" />
                 <span>
                   {BUSINESS_INFO.address}
                 </span>
               </div>
-              <div className="flex items-center gap-2.5">
+              <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-gold-400 shrink-0" />
                 <span className="text-white font-medium">{BUSINESS_INFO.businessTimings}</span>
               </div>
-              <div className="flex flex-col gap-1.5 pt-1">
+              <div className="flex flex-col gap-1 pt-1">
                 <a 
                   href={`tel:${PRIMARY_PHONE}`}
                   className="flex items-center gap-2 text-white hover:text-gold-300 font-semibold"
                 >
-                  <Phone className="w-4 h-4 text-gold-400" />
+                  <Phone className="w-3.5 h-3.5 text-gold-400" />
                   <span>Call: {PRIMARY_PHONE}</span>
                 </a>
                 <a 
                   href={`tel:${SECONDARY_PHONE}`}
                   className="flex items-center gap-2 text-white hover:text-gold-300 font-semibold"
                 >
-                  <Phone className="w-4 h-4 text-gold-400" />
+                  <Phone className="w-3.5 h-3.5 text-gold-400" />
                   <span>Call: {SECONDARY_PHONE}</span>
                 </a>
               </div>
-              <div className="pt-2">
+              <div className="pt-1.5">
                 <button
-                  onClick={() => handleWhatsApp("Footer Quick Enquiry")}
-                  className="w-full bg-whatsapp hover:bg-whatsapp-hover text-white py-2.5 px-3 rounded-xl font-semibold flex items-center justify-center gap-2 transition-colors shadow"
+                  onClick={handleWhatsApp}
+                  className="w-full bg-whatsapp hover:bg-whatsapp-hover text-white py-2.5 px-3 rounded-xl font-semibold flex items-center justify-center gap-2 transition-colors shadow active:scale-98"
                 >
                   <WhatsAppIcon className="w-4 h-4 fill-white shrink-0" />
                   <span>Chat on WhatsApp</span>
@@ -195,13 +195,13 @@ export default function Footer() {
         </div>
 
         {/* Bottom Strip */}
-        <div className="border-t border-maroon-800/80 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-stone-400 gap-4 text-center md:text-left">
+        <div className="border-t border-maroon-800/80 mt-10 sm:mt-12 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-stone-400 gap-3 text-center md:text-left">
           <p>
             © {new Date().getFullYear()} Radha Rani's Kitchen. All rights reserved. Handcrafted in Warangal, Telangana.
           </p>
-          <div className="flex items-center gap-4 text-gold-400">
+          <div className="flex items-center gap-2 sm:gap-4 text-gold-400 flex-wrap justify-center md:justify-start">
             <span>Arepally, Near Hanuman Temple, Warangal</span>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <span className="text-emerald-400 font-semibold flex items-center gap-1">
               <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
               Pure Vegetarian

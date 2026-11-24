@@ -113,43 +113,43 @@ export default function Catering() {
   ];
 
   return (
-    <div className="space-y-12 sm:space-y-16 pb-16">
+    <div className="space-y-10 sm:space-y-14 md:space-y-16 pb-16">
       
       {/* Header Banner */}
-      <section className="bg-gradient-to-r from-maroon-800 via-maroon-700 to-maroon-800 text-white py-12 sm:py-16 px-4 border-b-4 border-gold-500 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto text-center space-y-4 relative z-10">
-          <div className="inline-flex items-center gap-1.5 bg-gold-500/20 text-gold-300 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider border border-gold-400/30">
+      <section className="bg-gradient-to-r from-maroon-800 via-maroon-700 to-maroon-800 text-white py-10 sm:py-14 md:py-16 px-4 border-b-4 border-gold-500 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto text-center space-y-3 sm:space-y-4 relative z-10">
+          <div className="inline-flex items-center gap-1.5 bg-gold-500/20 text-gold-300 px-3.5 py-1 rounded-full text-[11px] sm:text-xs font-semibold uppercase tracking-wider border border-gold-400/30">
             <Users className="w-3.5 h-3.5" />
             <span>Pure Veg Catering &amp; Wholesale Rotis</span>
           </div>
-          <h1 className="font-serif font-extrabold text-3xl sm:text-5xl text-cream-100">
+          <h1 className="font-serif font-extrabold text-2xl sm:text-4xl md:text-5xl text-cream-100">
             Catering &amp; Bulk Roti Orders
           </h1>
-          <p className="text-stone-300 text-sm sm:text-base max-w-2xl mx-auto">
+          <p className="text-stone-300 text-xs sm:text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
             Traditional Telugu hospitality for your sacred family celebrations, and reliable daily wholesale roti supply for hostels and hotels across Warangal.
           </p>
         </div>
       </section>
 
       {/* Main Grid: Form + Packages */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
           
           {/* Left Column: Interactive WhatsApp Enquiry Form */}
-          <div className="lg:col-span-5 bg-white p-6 sm:p-8 rounded-3xl border border-amber-200/90 shadow-traditional sticky top-28">
-            <div className="space-y-2 mb-6">
-              <span className="text-[11px] font-bold text-gold-600 uppercase tracking-widest flex items-center gap-1">
+          <div className="lg:col-span-5 bg-white p-4 sm:p-6 md:p-8 rounded-3xl border border-amber-200/90 shadow-traditional lg:sticky lg:top-28">
+            <div className="space-y-1.5 mb-5 sm:mb-6">
+              <span className="text-[10px] sm:text-[11px] font-bold text-gold-600 uppercase tracking-widest flex items-center gap-1">
                 <Sparkles className="w-3.5 h-3.5 text-gold-500" /> Instant Quote via WhatsApp
               </span>
-              <h2 className="font-serif font-bold text-2xl text-maroon-800">
+              <h2 className="font-serif font-bold text-xl sm:text-2xl text-maroon-800">
                 Book Catering / Bulk Order
               </h2>
-              <p className="text-xs text-stone-600">
+              <p className="text-xs text-stone-600 leading-relaxed">
                 Fill in your event details below. Submitting automatically opens WhatsApp with a neatly formatted quotation request.
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-3.5 sm:space-y-4">
               {/* Name */}
               <div>
                 <label className="block text-xs font-semibold text-stone-700 mb-1">
@@ -162,7 +162,7 @@ export default function Catering() {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="e.g. Ramesh Chandra"
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 focus:border-maroon-700 focus:ring-1 focus:ring-maroon-700 text-xs text-stone-800 bg-cream-50 focus:bg-white transition-all outline-none"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 focus:border-maroon-700 focus:ring-1 focus:ring-maroon-700 text-base sm:text-sm text-stone-800 bg-cream-50 focus:bg-white transition-all outline-none"
                 />
               </div>
 
@@ -178,7 +178,7 @@ export default function Catering() {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="e.g. 9879687856"
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 focus:border-maroon-700 focus:ring-1 focus:ring-maroon-700 text-xs text-stone-800 bg-cream-50 focus:bg-white transition-all outline-none"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 focus:border-maroon-700 focus:ring-1 focus:ring-maroon-700 text-base sm:text-sm text-stone-800 bg-cream-50 focus:bg-white transition-all outline-none"
                 />
               </div>
 
@@ -193,7 +193,7 @@ export default function Catering() {
                     name="eventDate"
                     value={formData.eventDate}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 rounded-xl border border-stone-300 focus:border-maroon-700 text-xs text-stone-800 bg-cream-50 focus:bg-white transition-all outline-none"
+                    className="w-full px-3 py-2.5 rounded-xl border border-stone-300 focus:border-maroon-700 text-base sm:text-sm text-stone-800 bg-cream-50 focus:bg-white transition-all outline-none"
                   />
                 </div>
                 <div>
@@ -207,7 +207,7 @@ export default function Catering() {
                     value={formData.guestCount}
                     onChange={handleChange}
                     placeholder="e.g. 150 guests / 300 rotis"
-                    className="w-full px-3 py-2 rounded-xl border border-stone-300 focus:border-maroon-700 text-xs text-stone-800 bg-cream-50 focus:bg-white transition-all outline-none"
+                    className="w-full px-3 py-2.5 rounded-xl border border-stone-300 focus:border-maroon-700 text-base sm:text-sm text-stone-800 bg-cream-50 focus:bg-white transition-all outline-none"
                   />
                 </div>
               </div>
@@ -221,7 +221,7 @@ export default function Catering() {
                   name="serviceType"
                   value={formData.serviceType}
                   onChange={handleChange}
-                  className="w-full px-3 py-2.5 rounded-xl border border-stone-300 focus:border-maroon-700 text-xs text-stone-800 bg-cream-50 focus:bg-white transition-all outline-none cursor-pointer"
+                  className="w-full px-3 py-2.5 rounded-xl border border-stone-300 focus:border-maroon-700 text-base sm:text-sm text-stone-800 bg-cream-50 focus:bg-white transition-all outline-none cursor-pointer"
                 >
                   <option value="Traditional Telugu Wedding Feast (Vivaha Bhojanam)">
                     Wedding Feast (Vivaha Bhojanam)
@@ -236,7 +236,7 @@ export default function Catering() {
                     Daily Wholesale Roti Contract (Hostels/Hotels)
                   </option>
                   <option value="Traditional Sweets & Snacks Bulk Order (Sakinalu/Ariselu)">
-                    Festive Snacks & Sweets Bulk (Sakinalu/Ariselu)
+                    Festive Snacks &amp; Sweets Bulk (Sakinalu/Ariselu)
                   </option>
                   <option value="Birthday / Mini Party Meal Box Catering">
                     Mini Party / Birthday Pure Veg Catering
@@ -258,112 +258,109 @@ export default function Catering() {
                   value={formData.notes}
                   onChange={handleChange}
                   placeholder="e.g. Include Gutti Vankaya, Temple Pulihora, and Jowar rotis. Deliver near Subedari, Hanamkonda."
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 focus:border-maroon-700 text-xs text-stone-800 bg-cream-50 focus:bg-white transition-all outline-none resize-none"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 focus:border-maroon-700 text-base sm:text-sm text-stone-800 bg-cream-50 focus:bg-white transition-all outline-none resize-none"
                 ></textarea>
               </div>
 
               {/* Submit Button with authentic WhatsApp icon */}
               <button
                 type="submit"
-                className="w-full bg-whatsapp hover:bg-whatsapp-hover active:scale-[0.99] text-white py-3.5 px-4 rounded-xl font-bold text-sm shadow-lg hover:shadow-green-500/30 transition-all flex items-center justify-center gap-2.5"
+                className="w-full bg-whatsapp hover:bg-whatsapp-hover active:scale-[0.98] text-white py-3 sm:py-3.5 px-4 rounded-xl font-bold text-xs sm:text-sm shadow-md hover:shadow-green-500/30 transition-all flex items-center justify-center gap-2"
               >
                 <WhatsAppIcon className="w-5 h-5 fill-white shrink-0" />
                 <span>Submit &amp; Enquire on WhatsApp</span>
               </button>
 
-              <div className="text-[11px] text-stone-500 text-center flex items-center justify-center gap-1.5 pt-1">
-                <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+              <div className="text-[10px] sm:text-[11px] text-stone-500 text-center flex items-center justify-center gap-1.5 pt-1">
+                <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
                 <span>No advance payment needed to enquire. Instant WhatsApp response.</span>
               </div>
             </form>
 
             {/* Direct Phone Assistance */}
-            <div className="mt-6 pt-4 border-t border-amber-100 flex items-center justify-between text-xs text-stone-600">
-              <span>Prefer speaking directly?</span>
+            <div className="mt-5 pt-4 border-t border-amber-200 flex items-center justify-between text-xs text-stone-600">
+              <span>Prefer to discuss over phone?</span>
               <a 
-                href={`tel:${PRIMARY_PHONE}`} 
+                href={`tel:${PRIMARY_PHONE}`}
                 className="font-bold text-maroon-700 hover:text-gold-600 flex items-center gap-1"
               >
-                <Phone className="w-3 h-3 text-gold-500" />
-                {PRIMARY_PHONE}
+                <Phone className="w-3.5 h-3.5" />
+                <span>Call {PRIMARY_PHONE}</span>
               </a>
             </div>
           </div>
 
-          {/* Right Column: 4 Dedicated Packages */}
+          {/* Right Column: 4 Dedicated Packages Showcase */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="space-y-1 mb-2">
-              <span className="text-xs font-bold text-gold-600 uppercase tracking-widest">
-                Our Signature Arrangements
+            <div className="space-y-1">
+              <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gold-600">
+                Tailored Occasions
               </span>
-              <h2 className="font-serif font-bold text-2xl sm:text-3xl text-maroon-800">
-                Curated Catering &amp; Wholesale Packages
+              <h2 className="font-serif font-bold text-xl sm:text-3xl text-maroon-800">
+                Our Signature Packages
               </h2>
               <p className="text-xs sm:text-sm text-stone-600">
-                Each package is customized according to your guest count, dietary preferences, and event timings.
+                Designed to honour the authenticity of Telugu traditions with pure ingredients, strict hygiene, and punctual delivery.
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-5">
               {cateringPackages.map((pkg, idx) => (
                 <div
                   key={idx}
-                  className={`bg-white rounded-2xl p-6 sm:p-7 border transition-all duration-300 shadow-traditional relative overflow-hidden ${
-                    pkg.popular
-                      ? 'border-2 border-gold-400'
-                      : 'border-amber-200/90'
+                  className={`bg-white rounded-2xl p-4 sm:p-6 border transition-all duration-300 shadow-traditional hover:shadow-xl ${
+                    pkg.popular ? 'border-2 border-gold-400' : 'border border-amber-200/90'
                   }`}
                 >
-                  {pkg.popular && (
-                    <div className="absolute top-0 right-0 bg-gold-500 text-maroon-950 font-bold text-[10px] uppercase tracking-wider py-1 px-3 rounded-bl-xl shadow-sm">
-                      Most Popular in Warangal
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-amber-100 pb-3">
+                    <div>
+                      {pkg.popular && (
+                        <span className="inline-flex items-center gap-1 text-[10px] uppercase font-bold tracking-wider text-maroon-700 bg-gold-100 px-2.5 py-0.5 rounded-full mb-1">
+                          <Sparkles className="w-3 h-3 text-gold-600 fill-current" />
+                          Most Requested
+                        </span>
+                      )}
+                      <h3 className="font-serif font-bold text-base sm:text-lg text-maroon-800">
+                        {pkg.title}
+                      </h3>
+                      <p className="text-xs text-gold-700 font-medium">
+                        {pkg.subtitle}
+                      </p>
                     </div>
-                  )}
-
-                  <div className="space-y-1">
-                    <span className="text-xs font-semibold text-gold-600">
-                      {pkg.subtitle}
+                    <span className="bg-cream-100 text-maroon-800 text-xs font-bold px-3 py-1 rounded-full border border-amber-200 self-start sm:self-auto shrink-0">
+                      👥 {pkg.guests}
                     </span>
-                    <h3 className="font-serif font-bold text-xl text-maroon-800">
-                      {pkg.title}
-                    </h3>
-                    <div className="inline-flex items-center gap-1.5 text-xs text-stone-600 bg-cream-100 px-2.5 py-1 rounded-md font-medium">
-                      <Users className="w-3.5 h-3.5 text-maroon-700" />
-                      <span>Capacity: {pkg.guests}</span>
-                    </div>
                   </div>
 
-                  {/* Feature list */}
-                  <div className="mt-4 pt-3 border-t border-amber-100">
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-stone-700">
-                      {pkg.features.map((item, fIdx) => (
+                  {/* Highlights */}
+                  <div className="py-3">
+                    <span className="text-[11px] font-bold text-stone-700 uppercase tracking-wider block mb-2">
+                      Menu Highlights:
+                    </span>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-stone-600">
+                      {pkg.features.map((feat, fIdx) => (
                         <li key={fIdx} className="flex items-start gap-1.5">
                           <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
-                          <span>{item}</span>
+                          <span>{feat}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  {/* Card CTA */}
-                  <div className="mt-5 pt-3 border-t border-amber-100 flex items-center justify-between">
-                    <span className="text-xs text-stone-500">
-                      Custom menu additions welcome
-                    </span>
+                  {/* Direct WhatsApp button for this specific package */}
+                  <div className="pt-3 border-t border-amber-100 flex items-center justify-between">
+                    <span className="text-[11px] text-stone-500">Custom menus available</span>
                     <button
                       onClick={() => {
                         const url = getCateringWhatsAppUrl({
-                          name: '',
-                          phone: '',
-                          serviceType: pkg.title,
-                          guestCount: pkg.guests,
-                          notes: `Requesting quote and menu options for ${pkg.title}`
+                          ...formData,
+                          serviceType: pkg.title
                         });
                         window.open(url, '_blank');
                       }}
-                      className="bg-maroon-700 hover:bg-maroon-800 text-white text-xs font-bold px-4 py-2 rounded-lg transition-colors flex items-center gap-2"
+                      className="bg-maroon-700 hover:bg-maroon-800 text-white px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs font-semibold shadow-sm transition-colors flex items-center gap-1.5"
                     >
-                      <WhatsAppIcon className="w-4 h-4 fill-white shrink-0" />
+                      <WhatsAppIcon className="w-3.5 h-3.5 fill-white" />
                       <span>Enquire This Package</span>
                     </button>
                   </div>
@@ -371,18 +368,19 @@ export default function Catering() {
               ))}
             </div>
 
-            {/* FAQs */}
-            <div className="bg-cream-100/80 rounded-2xl p-6 border border-amber-200 space-y-4 mt-8">
-              <h4 className="font-serif font-bold text-lg text-maroon-800 flex items-center gap-2">
+            {/* FAQs Accordion / List */}
+            <div className="bg-cream-100/90 rounded-2xl p-4 sm:p-6 border border-amber-200 space-y-4">
+              <div className="flex items-center gap-2 text-maroon-800 font-serif font-bold text-base sm:text-lg">
                 <HelpCircle className="w-5 h-5 text-gold-600" />
                 <span>Frequently Asked Questions</span>
-              </h4>
+              </div>
+
               <div className="space-y-3">
                 {faqs.map((faq, fIdx) => (
-                  <div key={fIdx} className="bg-white p-4 rounded-xl border border-amber-200/80 text-xs space-y-1">
-                    <h5 className="font-bold text-maroon-800">
+                  <div key={fIdx} className="bg-white p-3.5 rounded-xl border border-amber-100 text-xs space-y-1">
+                    <strong className="text-maroon-800 block text-xs sm:text-sm">
                       Q: {faq.q}
-                    </h5>
+                    </strong>
                     <p className="text-stone-600 leading-relaxed">
                       {faq.a}
                     </p>
