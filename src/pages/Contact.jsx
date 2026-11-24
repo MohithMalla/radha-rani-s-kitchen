@@ -10,7 +10,7 @@ import {
 } from 'lucide-react';
 import WhatsAppIcon from '../components/WhatsAppIcon';
 import { BUSINESS_INFO } from '../data/products';
-import { getGeneralWhatsAppUrl, PRIMARY_PHONE, SECONDARY_PHONE } from '../utils/whatsapp';
+import { getWhatsAppUrl, getCustomerWhatsAppUrl, PRIMARY_PHONE, SECONDARY_PHONE } from '../utils/whatsapp';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -27,12 +27,25 @@ export default function Contact() {
 
   const handleQuickWhatsAppSubmit = (e) => {
     e.preventDefault();
-    const msg = `Namaste Radha Rani's Kitchen! 🙏\n\n*CONTACT FORM MESSAGE*\n━━━━━━━━━━━━━━━━━━━━\n👤 *Name:* ${formData.name || 'Customer'}\n📞 *Phone:* ${formData.phone || 'Not provided'}\n🍲 *Interest:* ${formData.serviceInterest}\n💬 *Message:* ${formData.message || 'Please contact me regarding your offerings.'}\n━━━━━━━━━━━━━━━━━━━━\nLooking forward to your response!`;
-    window.open(getGeneralWhatsAppUrl(msg), '_blank');
+    const lines = [
+      `Hello Radha Rani's Kitchen,`,
+      ``,
+      `I am submitting an enquiry from your website:`,
+      `--------------------------------------`,
+      `* Name: ${formData.name ? formData.name.trim() : 'Customer'}`,
+      `* Phone: ${formData.phone ? formData.phone.trim() : 'Provided via WhatsApp'}`,
+      `* Service Interest: ${formData.serviceInterest}`,
+    ];
+    if (formData.message && formData.message.trim()) {
+      lines.push(`* Message: ${formData.message.trim()}`);
+    }
+    lines.push(`--------------------------------------`);
+    lines.push(`Looking forward to your response. Thank you!`);
+    window.open(getWhatsAppUrl(lines.join('\n')), '_blank');
   };
 
   const handleDirectWhatsApp = () => {
-    window.open(getGeneralWhatsAppUrl("Direct Contact Enquiry"), '_blank');
+    window.open(getCustomerWhatsAppUrl("order_now"), '_blank');
   };
 
   return (

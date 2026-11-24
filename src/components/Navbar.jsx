@@ -9,7 +9,7 @@ import {
   ChevronRight 
 } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
-import { getGeneralWhatsAppUrl, PRIMARY_PHONE, SECONDARY_PHONE } from '../utils/whatsapp';
+import { getCustomerWhatsAppUrl, PRIMARY_PHONE, SECONDARY_PHONE } from '../utils/whatsapp';
 import { BUSINESS_INFO } from '../data/products';
 
 export default function Navbar() {
@@ -25,7 +25,7 @@ export default function Navbar() {
   ];
 
   const handleWhatsAppClick = () => {
-    window.open(getGeneralWhatsAppUrl("Website Header Enquiry"), "_blank");
+    window.open(getCustomerWhatsAppUrl("header_order"), "_blank");
   };
 
   return (
@@ -68,14 +68,14 @@ export default function Navbar() {
       {/* 2. Main Sticky Navbar (Crisp White / Warm Cream) */}
       <nav className="bg-white/98 backdrop-blur-md border-b border-amber-100 shadow-sm transition-all">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-24 sm:h-28 md:h-32 py-2">
+          <div className="flex items-center justify-between h-20 sm:h-22 md:h-24 py-1.5">
             
-            {/* Brand Logo Only - Extra Large, Bold & Prominent */}
-            <Link to="/" className="flex items-center group py-1 focus:outline-none shrink-0">
+            {/* Brand Logo Only - Balanced, Crisp & Professional */}
+            <Link to="/" className="flex items-center group focus:outline-none shrink-0 py-1">
               <img 
                 src="/logo.png" 
                 alt="Radha Rani's Kitchen" 
-                className="h-20 sm:h-24 md:h-28 lg:h-32 max-h-32 w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-md"
+                className="h-13 sm:h-15 md:h-16 lg:h-17 w-auto object-contain transition-transform duration-300 group-hover:scale-102 drop-shadow-sm"
               />
             </Link>
 

@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { X } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
-import { getGeneralWhatsAppUrl } from '../utils/whatsapp';
+import { getCustomerWhatsAppUrl } from '../utils/whatsapp';
 
 export default function FloatingWhatsApp() {
   const [showTooltip, setShowTooltip] = useState(true);
 
   const handleClick = () => {
-    window.open(getGeneralWhatsAppUrl("Instant WhatsApp Order Enquiry"), "_blank");
+    window.open(getCustomerWhatsAppUrl("floating_chat"), "_blank");
   };
 
   return (

@@ -11,11 +11,11 @@ import {
 } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
 import { BUSINESS_INFO, CATEGORIES } from '../data/products';
-import { getGeneralWhatsAppUrl, PRIMARY_PHONE, SECONDARY_PHONE } from '../utils/whatsapp';
+import { getCustomerWhatsAppUrl, PRIMARY_PHONE, SECONDARY_PHONE } from '../utils/whatsapp';
 
 export default function Footer() {
-  const handleWhatsApp = (text) => {
-    window.open(getGeneralWhatsAppUrl(text), '_blank');
+  const handleWhatsApp = () => {
+    window.open(getCustomerWhatsAppUrl("order_now"), '_blank');
   };
 
   return (
@@ -61,13 +61,13 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           
-          {/* Col 1: Brand Logo Only - Clean & Prominent */}
+          {/* Col 1: Brand Logo Only - Balanced & Professional */}
           <div className="space-y-4">
-            <div className="inline-block bg-white/95 p-3 rounded-2xl shadow-xl border-2 border-gold-400">
+            <div className="inline-block bg-white/95 p-2 rounded-2xl shadow-lg border border-gold-300">
               <img 
                 src="/logo.png" 
                 alt="Radha Rani's Kitchen" 
-                className="h-24 sm:h-28 md:h-32 w-auto object-contain"
+                className="h-16 sm:h-18 md:h-20 w-auto object-contain"
               />
             </div>
             <p className="text-gold-400 text-sm font-medium italic">

@@ -7,11 +7,11 @@ import {
 } from 'lucide-react';
 import WhatsAppIcon from '../components/WhatsAppIcon';
 import { SERVICES_DETAILED } from '../data/products';
-import { getGeneralWhatsAppUrl } from '../utils/whatsapp';
+import { getCustomerWhatsAppUrl } from '../utils/whatsapp';
 
 export default function Services() {
   const handleServiceWhatsApp = (serviceTitle) => {
-    window.open(getGeneralWhatsAppUrl(`Enquiry for Service: ${serviceTitle}`), '_blank');
+    window.open(getCustomerWhatsAppUrl("service_category", serviceTitle), '_blank');
   };
 
   return (

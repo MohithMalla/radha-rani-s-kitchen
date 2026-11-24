@@ -4,7 +4,7 @@ import { Search, X, Filter, Sparkles, AlertCircle } from 'lucide-react';
 import WhatsAppIcon from '../components/WhatsAppIcon';
 import { CATEGORIES, PRODUCTS } from '../data/products';
 import ProductCard from '../components/ProductCard';
-import { getGeneralWhatsAppUrl } from '../utils/whatsapp';
+import { getCustomerWhatsAppUrl } from '../utils/whatsapp';
 
 export default function Menu() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -153,7 +153,7 @@ export default function Menu() {
               </p>
               <button
                 onClick={() => {
-                  window.open(getGeneralWhatsAppUrl(`Bulk Order Enquiry for ${currentCategoryObj.name}`), '_blank');
+                  window.open(getCustomerWhatsAppUrl("service_category", currentCategoryObj.name), '_blank');
                 }}
                 className="shrink-0 text-maroon-700 hover:text-maroon-900 font-bold underline flex items-center gap-1.5"
               >
@@ -191,7 +191,7 @@ export default function Menu() {
               <div className="text-center pt-8 text-xs text-stone-500 border-t border-amber-200">
                 You've viewed all {filteredProducts.length} items in this selection. Looking for something custom?
                 <button
-                  onClick={() => window.open(getGeneralWhatsAppUrl("Custom Menu Item Request"), "_blank")}
+                  onClick={() => window.open(getCustomerWhatsAppUrl("order_now"), "_blank")}
                   className="text-maroon-700 font-bold ml-1 underline hover:text-maroon-900 inline-flex items-center gap-1"
                 >
                   <WhatsAppIcon className="w-3.5 h-3.5 fill-maroon-700 inline" />
@@ -224,7 +224,7 @@ export default function Menu() {
                 Reset All Filters
               </button>
               <button
-                onClick={() => window.open(getGeneralWhatsAppUrl(`Looking for: ${searchQuery}`), "_blank")}
+                onClick={() => window.open(getCustomerWhatsAppUrl("order_now"), "_blank")}
                 className="w-full sm:w-auto bg-whatsapp text-white px-5 py-2.5 rounded-xl font-semibold text-xs flex items-center justify-center gap-2 transition-colors"
               >
                 <WhatsAppIcon className="w-4 h-4 fill-white" />

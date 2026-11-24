@@ -16,7 +16,7 @@ import {
 import WhatsAppIcon from '../components/WhatsAppIcon';
 import { CATEGORIES, PRODUCTS, TESTIMONIALS, BUSINESS_INFO } from '../data/products';
 import ProductCard from '../components/ProductCard';
-import { getGeneralWhatsAppUrl, PRIMARY_PHONE } from '../utils/whatsapp';
+import { getCustomerWhatsAppUrl, PRIMARY_PHONE } from '../utils/whatsapp';
 
 export default function Home() {
   const navigate = useNavigate();
@@ -30,8 +30,8 @@ export default function Home() {
     return item.categoryId === selectedHomeCategory;
   }).slice(0, 8);
 
-  const handleWhatsAppEnquiry = (topic = "Website Home Enquiry") => {
-    window.open(getGeneralWhatsAppUrl(topic), '_blank');
+  const handleWhatsAppEnquiry = (type = "order_now") => {
+    window.open(getCustomerWhatsAppUrl(type), '_blank');
   };
 
   return (

@@ -10,11 +10,11 @@ import {
 } from 'lucide-react';
 import WhatsAppIcon from '../components/WhatsAppIcon';
 import { BUSINESS_INFO } from '../data/products';
-import { getGeneralWhatsAppUrl, PRIMARY_PHONE } from '../utils/whatsapp';
+import { getCustomerWhatsAppUrl, PRIMARY_PHONE } from '../utils/whatsapp';
 
 export default function About() {
   const handleWhatsApp = () => {
-    window.open(getGeneralWhatsAppUrl("Enquiry about Radha Rani's Kitchen story & services"), '_blank');
+    window.open(getCustomerWhatsAppUrl("order_now"), '_blank');
   };
 
   const values = [
