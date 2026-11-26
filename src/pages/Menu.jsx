@@ -98,9 +98,9 @@ export default function Menu() {
                 value={searchQuery}
                 onChange={(e) => {
                   setSearchQuery(e.target.value);
-                  setVisibleCount(12);
+                  setVisibleCount(16);
                 }}
-                placeholder="Search phulkas, sakinalu, pulihora, ghee..."
+                placeholder="Search laddus, ariselu, sakinalu, avakaya, podis, rotis..."
                 className="w-full pl-10 pr-10 py-2.5 rounded-xl border border-stone-300 focus:border-maroon-700 focus:ring-1 focus:ring-maroon-700 text-base sm:text-sm text-stone-800 placeholder-stone-400 bg-cream-50 focus:bg-white transition-all outline-none"
               />
               {searchQuery && (
@@ -131,10 +131,10 @@ export default function Menu() {
                 <button
                   key={cat.id}
                   onClick={() => handleCategoryChange(cat.id)}
-                  className={`px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 flex items-center gap-1.5 cursor-pointer ${
+                  className={`px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-250 ease-out flex items-center gap-1.5 cursor-pointer transform-gpu ${
                     isSelected
                       ? 'bg-maroon-700 text-white shadow-md border border-maroon-800 scale-102'
-                      : 'bg-cream-100 text-stone-700 hover:bg-cream-200 border border-amber-200/90'
+                      : 'bg-cream-100 text-stone-700 hover:bg-cream-200 hover:border-amber-300 hover:text-maroon-800 border border-amber-200/90 hover:scale-103 active:scale-95'
                   }`}
                 >
                   <span>{cat.shortName}</span>

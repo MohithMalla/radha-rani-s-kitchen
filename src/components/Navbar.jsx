@@ -7,19 +7,22 @@ import {
   MapPin, 
   Menu as MenuIcon, 
   X, 
-  ChevronRight,
-  ChevronDown,
-  Sparkles,
-  Utensils
+  ChevronRight, 
+  ChevronDown, 
+  Utensils,
+  ShoppingBag
 } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
 import { getCustomerWhatsAppUrl, PRIMARY_PHONE, SECONDARY_PHONE } from '../utils/whatsapp';
 import { BUSINESS_INFO, CATEGORIES } from '../data/products';
+import { useOrder } from '../context/OrderContext';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [menuDropdownOpen, setMenuDropdownOpen] = useState(false);
   const location = useLocation();
+
+  const { totalCount, openOrderDrawer } = useOrder();
 
   // Close mobile drawer and dropdown when route changes
   useEffect(() => {
@@ -172,7 +175,7 @@ export default function Navbar() {
                                 onClick={() => setMenuDropdownOpen(false)}
                               >
                                 <Utensils className="w-3 h-3" />
-                                <span>View All Menu Items (28+)</span>
+                                <span>View All Menu Items (65+)</span>
                               </Link>
                             </div>
                             <div className="space-y-0.5">
@@ -212,12 +215,31 @@ export default function Navbar() {
                 })}
               </div>
 
-              {/* WhatsApp CTA & Mobile Toggle */}
+              {/* Order Tray, WhatsApp CTA & Mobile Toggle */}
               <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+                {/* Order Tray Button - Desktop & Mobile */}
+                <button
+                  type="button"
+                  onClick={openOrderDrawer}
+                  className="relative flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-2 rounded-full text-maroon-800 hover:bg-amber-100/70 border border-amber-200/90 transition-all font-semibold text-xs md:text-sm active:scale-95 cursor-pointer bg-cream-50"
+                  title="View Order Tray"
+                  aria-label="View Order Tray"
+                >
+                  <div className="relative">
+                    <ShoppingBag className="w-4 h-4 sm:w-5 sm:h-5 text-maroon-700" />
+                    {totalCount > 0 && (
+                      <span className="absolute -top-2 -right-2 bg-gold-500 text-maroon-950 text-[10px] font-extrabold w-4 h-4 sm:w-4.5 sm:h-4.5 rounded-full flex items-center justify-center shadow-xs">
+                        {totalCount}
+                      </span>
+                    )}
+                  </div>
+                  <span className="hidden sm:inline">Tray</span>
+                </button>
+
                 {/* Tablet & Desktop WhatsApp CTA */}
                 <button
                   onClick={handleWhatsAppClick}
-                  className="hidden sm:inline-flex items-center gap-2 bg-whatsapp hover:bg-whatsapp-hover text-white px-3.5 md:px-5 py-2 sm:py-2.5 rounded-full font-semibold text-xs md:text-sm shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 active:scale-95 shrink-0"
+                  className="hidden sm:inline-flex items-center gap-2 bg-whatsapp hover:bg-whatsapp-hover text-white px-3.5 md:px-5 py-2 sm:py-2.5 rounded-full font-semibold text-xs md:text-sm shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 active:scale-95 shrink-0 cursor-pointer"
                   aria-label="Order on WhatsApp"
                 >
                   <WhatsAppIcon className="w-4 h-4 md:w-5 md:h-5 fill-white shrink-0" />
@@ -228,7 +250,7 @@ export default function Navbar() {
                 {/* Mobile Direct 1-Tap WhatsApp CTA */}
                 <button
                   onClick={handleWhatsAppClick}
-                  className="sm:hidden flex items-center justify-center w-9 h-9 rounded-full bg-whatsapp hover:bg-whatsapp-hover text-white shadow-md active:scale-90 transition-all shrink-0"
+                  className="sm:hidden flex items-center justify-center w-9 h-9 rounded-full bg-whatsapp hover:bg-whatsapp-hover text-white shadow-md active:scale-90 transition-all shrink-0 cursor-pointer"
                   aria-label="Chat on WhatsApp"
                   title="Chat on WhatsApp"
                 >
@@ -302,6 +324,32 @@ export default function Navbar() {
 
             {/* Drawer Body: Links & Details */}
             <div className="p-4 sm:p-5 space-y-4 flex-1">
+              {/* Order Tray Quick Access in Drawer */}
+              <button
+                type="button"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  openOrderDrawer();
+                }}
+                className="w-full bg-amber-50 hover:bg-amber-100/80 border border-amber-300/80 p-3 rounded-xl flex items-center justify-between text-left transition-colors cursor-pointer"
+              >
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-maroon-700 text-gold-300 flex items-center justify-center">
+                    <ShoppingBag className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold text-maroon-900">Your Order Tray</div>
+                    <div className="text-[10px] text-stone-600">
+                      {totalCount > 0 ? `${totalCount} items in tray` : 'Tray is empty'}
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-1 text-xs font-bold text-maroon-700">
+                  <span>View</span>
+                  <ChevronRight className="w-3.5 h-3.5" />
+                </div>
+              </button>
+
               {/* Quick Pure Veg Badge */}
               <div className="bg-emerald-50 border border-emerald-200 p-2.5 rounded-xl text-xs text-emerald-800 flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-pulse shrink-0"></span>

@@ -1,24 +1,45 @@
 import React, { useState } from 'react';
-import { Sparkles } from 'lucide-react';
+import { Sparkles, Plus, Check, ShoppingBag } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
 import { getProductWhatsAppUrl } from '../utils/whatsapp';
+import { useOrder } from '../context/OrderContext';
 
 export default function ProductCard({ product }) {
   const [selectedPack, setSelectedPack] = useState(
     product.packOptions && product.packOptions.length > 0 ? product.packOptions[0] : ''
   );
   const [imgError, setImgError] = useState(false);
+  const [justAdded, setJustAdded] = useState(false);
+
+  const { addToOrder, items } = useOrder();
 
   // Fallback image generator / placeholder with pure vegetarian Indian food
   const fallbackImage = "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=700&q=80";
 
-  const handleEnquire = () => {
+  // Dynamic price extraction from selectedPack (e.g. "250 g - ₹100" -> "₹100")
+  const priceMatch = selectedPack ? selectedPack.match(/₹[\d,]+(\/piece)?/) : null;
+  const currentPrice = priceMatch ? priceMatch[0] : (product.startingPrice ? `₹${product.startingPrice}` : '');
+  const currentSize = selectedPack && selectedPack.includes(' - ') ? selectedPack.split(' - ')[0] : product.priceUnit;
+
+  // Check if current pack is already in the tray
+  const currentItemId = `${product.id}__${selectedPack}`;
+  const existingInTray = items.find((i) => i.id === currentItemId);
+
+  // Add to Multi-Product Order Tray
+  const handleAddToTray = () => {
+    addToOrder(product, selectedPack, 1);
+    setJustAdded(true);
+    setTimeout(() => setJustAdded(false), 1500);
+  };
+
+  // Direct 1-Click WhatsApp for single product
+  const handleDirectWhatsApp = () => {
     const url = getProductWhatsAppUrl(product, selectedPack, 1);
     window.open(url, '_blank');
   };
 
   return (
-    <div className="bg-white rounded-2xl overflow-hidden border border-amber-200/80 shadow-traditional hover:shadow-xl transition-all duration-300 flex flex-col h-full group hover:-translate-y-1">
+    <div className="bg-white rounded-2xl overflow-hidden border border-amber-200/90 hover:border-amber-400/80 shadow-traditional hover:shadow-traditional-hover transition-[transform,box-shadow,border-color] duration-350 ease-out flex flex-col h-full group hover:-translate-y-1.5 transform-gpu will-change-transform">
       {/* Product Image Container */}
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-cream-200">
         <img
@@ -26,7 +47,7 @@ export default function ProductCard({ product }) {
           alt={product.name}
           loading="lazy"
           onError={() => setImgError(true)}
-          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
+          className="w-full h-full object-cover object-center group-hover:scale-106 transition-transform duration-700 ease-out transform-gpu will-change-transform"
         />
 
         {/* Gradient Overlay */}
@@ -55,26 +76,51 @@ export default function ProductCard({ product }) {
         </div>
 
         {/* Category tag overlaid */}
-        <div className="absolute bottom-2 left-2.5 right-2.5 sm:left-3 sm:right-3">
-          <span className="text-[10px] sm:text-[11px] font-medium text-amber-200/90 tracking-wide uppercase drop-shadow">
+        <div className="absolute bottom-2 left-2.5 right-2.5 sm:left-3 sm:right-3 flex items-center justify-between">
+          <span className="text-[10px] sm:text-[11px] font-semibold text-amber-200/95 tracking-wide uppercase drop-shadow">
             {product.categoryName}
           </span>
+          {existingInTray && (
+            <span className="bg-emerald-600/90 text-white text-[9px] font-bold px-2 py-0.5 rounded-full backdrop-blur-xs flex items-center gap-1 shadow-xs">
+              <Check className="w-2.5 h-2.5 stroke-[3]" />
+              In Tray ({existingInTray.quantity})
+            </span>
+          )}
         </div>
       </div>
 
       {/* Card Content */}
-      <div className="p-3.5 sm:p-4 md:p-5 flex-1 flex flex-col justify-between space-y-3">
-        <div>
-          <h3 className="font-serif font-bold text-base sm:text-lg text-maroon-700 leading-snug line-clamp-2 group-hover:text-maroon-800 transition-colors">
+      <div className="p-3.5 sm:p-4 flex-1 flex flex-col justify-between space-y-2.5">
+        <div className="space-y-1.5">
+          {/* Full Product Title without truncation */}
+          <h3 className="font-serif font-bold text-base sm:text-lg text-maroon-800 leading-snug group-hover:text-maroon-900 transition-colors duration-200">
             {product.name}
           </h3>
-          <p className="text-xs text-stone-600 mt-1 leading-relaxed line-clamp-2">
+
+          {/* Prominent Price Tag */}
+          {currentPrice && (
+            <div className="flex items-baseline gap-1.5 pt-0.5">
+              <span className="text-xl sm:text-2xl font-sans font-bold text-maroon-800 tracking-tight">
+                {currentPrice}
+              </span>
+              {currentSize && (
+                <span className="text-xs text-stone-500 font-medium">
+                  / {currentSize}
+                </span>
+              )}
+            </div>
+          )}
+
+          {/* Small & compact description */}
+          <p className="text-[11px] sm:text-xs text-stone-500 leading-relaxed line-clamp-2">
             {product.description}
           </p>
 
+          {/* Small compact pairing note */}
           {product.idealFor && (
-            <div className="mt-2 text-[10px] sm:text-[11px] text-gold-700 bg-gold-50/80 px-2 py-1 rounded border border-gold-200/60 font-medium line-clamp-1">
-              ✨ Ideal for: {product.idealFor}
+            <div className="text-[10px] sm:text-[11px] text-amber-900 bg-amber-50/90 px-2 py-1 rounded-md border border-amber-200/70 font-medium leading-tight flex items-start gap-1">
+              <span className="text-gold-600 shrink-0 select-none">✨</span>
+              <span className="leading-snug">{product.idealFor}</span>
             </div>
           )}
         </div>
@@ -86,11 +132,10 @@ export default function ProductCard({ product }) {
               <label className="block text-[10px] sm:text-[11px] font-semibold text-stone-500 uppercase tracking-wider mb-1">
                 Select Pack / Quantity:
               </label>
-              {/* text-base sm:text-xs prevents iOS Safari from auto-zooming on focus */}
               <select
                 value={selectedPack}
                 onChange={(e) => setSelectedPack(e.target.value)}
-                className="w-full text-base sm:text-xs font-medium text-stone-800 bg-cream-50 border border-amber-200 rounded-lg px-2.5 py-2 focus:ring-1 focus:ring-maroon-600 focus:outline-none transition-all cursor-pointer"
+                className="w-full text-base sm:text-xs font-semibold text-stone-800 bg-cream-50 border border-amber-200 rounded-lg px-2.5 py-2 focus:ring-2 focus:ring-maroon-600/20 focus:border-maroon-600 focus:outline-none transition-all duration-200 cursor-pointer"
               >
                 {product.packOptions.map((opt, idx) => (
                   <option key={idx} value={opt}>
@@ -101,14 +146,42 @@ export default function ProductCard({ product }) {
             </div>
           )}
 
-          {/* Full-width WhatsApp Enquiry CTA with authentic WhatsApp icon */}
-          <button
-            onClick={handleEnquire}
-            className="w-full mt-2 bg-whatsapp hover:bg-whatsapp-hover active:scale-[0.98] text-white py-2.5 px-3 rounded-xl font-semibold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2 group/btn"
-          >
-            <WhatsAppIcon className="w-4 h-4 fill-white group-hover/btn:scale-110 transition-transform" />
-            <span>Enquire on WhatsApp</span>
-          </button>
+          {/* Dual Action Buttons: Add to Multi-Item Tray + Direct WhatsApp Single Item */}
+          <div className="flex items-center gap-1.5 sm:gap-2 pt-1">
+            {/* Primary Multi-Item CTA: Add to Order Tray */}
+            <button
+              type="button"
+              onClick={handleAddToTray}
+              className={`flex-1 py-2.5 px-2.5 sm:px-3 rounded-xl font-bold text-xs shadow-xs hover:shadow-md transition-all duration-200 ease-out flex items-center justify-center gap-1.5 active:scale-95 hover:brightness-105 cursor-pointer transform-gpu ${
+                justAdded
+                  ? 'bg-emerald-700 text-white'
+                  : 'bg-maroon-700 hover:bg-maroon-800 text-cream-100'
+              }`}
+            >
+              {justAdded ? (
+                <>
+                  <Check className="w-3.5 h-3.5 text-gold-300 stroke-[3]" />
+                  <span>Added!</span>
+                </>
+              ) : (
+                <>
+                  <Plus className="w-3.5 h-3.5 text-gold-300 stroke-[3]" />
+                  <span>Add to Order</span>
+                </>
+              )}
+            </button>
+
+            {/* Direct 1-Click WhatsApp Button for Single Item */}
+            <button
+              type="button"
+              onClick={handleDirectWhatsApp}
+              className="bg-whatsapp hover:bg-whatsapp-hover text-white py-2.5 px-3 rounded-xl font-bold text-xs shadow-xs hover:shadow-md hover:brightness-105 transition-all duration-200 ease-out flex items-center justify-center gap-1.5 active:scale-95 shrink-0 transform-gpu cursor-pointer"
+              title="Buy only this item directly via WhatsApp"
+            >
+              <WhatsAppIcon className="w-3.5 h-3.5 fill-white shrink-0" />
+              <span>Buy Now</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>

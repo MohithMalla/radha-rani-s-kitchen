@@ -52,7 +52,12 @@ export default {
       },
       boxShadow: {
         'traditional': '0 4px 20px -2px rgba(107, 15, 26, 0.08), 0 2px 6px -1px rgba(107, 15, 26, 0.04)',
+        'traditional-hover': '0 12px 30px -4px rgba(107, 15, 26, 0.14), 0 6px 14px -2px rgba(212, 160, 23, 0.12)',
         'warm': '0 10px 30px -4px rgba(212, 160, 23, 0.15)',
+      },
+      transitionTimingFunction: {
+        'smooth': 'cubic-bezier(0.16, 1, 0.3, 1)',
+        'spring': 'cubic-bezier(0.34, 1.56, 0.64, 1)',
       }
     },
   },

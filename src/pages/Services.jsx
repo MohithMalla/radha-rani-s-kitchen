@@ -42,17 +42,17 @@ export default function Services() {
             <div
               key={service.id}
               id={service.id}
-              className="bg-white rounded-3xl overflow-hidden border border-amber-200/80 shadow-traditional hover:shadow-2xl transition-all duration-300 scroll-mt-28"
+              className="bg-white rounded-3xl overflow-hidden border border-amber-200/80 hover:border-amber-300 shadow-traditional hover:shadow-traditional-hover transition-[transform,box-shadow,border-color] duration-350 ease-out hover:-translate-y-1 scroll-mt-28 transform-gpu group"
             >
               <div className={`grid grid-cols-1 md:grid-cols-12 gap-0 ${isReversed ? 'md:flex-row-reverse' : ''}`}>
                 
                 {/* Visual Image Column */}
-                <div className={`md:col-span-5 relative min-h-[240px] sm:min-h-[280px] md:min-h-full ${isReversed ? 'md:order-2' : ''}`}>
+                <div className={`md:col-span-5 relative min-h-[240px] sm:min-h-[280px] md:min-h-full ${isReversed ? 'md:order-2' : ''} overflow-hidden`}>
                   <img
                     src={service.image}
                     alt={service.title}
                     loading="lazy"
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out transform-gpu will-change-transform"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
                   

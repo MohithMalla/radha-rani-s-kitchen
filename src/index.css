@@ -69,3 +69,31 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Silky smooth hardware-accelerated transitions & anti-aliased transforms */
+.transform-gpu {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Optimize smooth transitions on cards and media */
+.smooth-card {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.smooth-card:hover {
+  transform: translateY(-5px) translateZ(0);
+}
+
+.smooth-zoom {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}

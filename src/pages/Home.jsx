@@ -48,19 +48,19 @@ export default function Home() {
               <button
                 key={cat.id}
                 onClick={() => navigate(`/menu?category=${cat.id}`)}
-                className="flex flex-col items-center shrink-0 w-[74px] sm:w-[94px] md:w-[110px] lg:w-[120px] group cursor-pointer text-center focus:outline-none transition-transform hover:-translate-y-1"
+                className="flex flex-col items-center shrink-0 w-[74px] sm:w-[94px] md:w-[110px] lg:w-[120px] group cursor-pointer text-center focus:outline-none transition-transform duration-300 ease-out hover:-translate-y-1.5 transform-gpu"
               >
                 {/* Circular Food Image */}
-                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-22 md:h-22 lg:w-24 lg:h-24 rounded-full overflow-hidden shadow-md group-hover:shadow-xl transition-all duration-300 ring-2 ring-amber-300/70 group-hover:ring-maroon-700 bg-cream-200">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-22 md:h-22 lg:w-24 lg:h-24 rounded-full overflow-hidden shadow-md group-hover:shadow-xl transition-[box-shadow,ring] duration-350 ease-out ring-2 ring-amber-300/70 group-hover:ring-maroon-700 bg-cream-200 transform-gpu">
                   <img 
                     src={cat.image} 
                     alt={cat.name} 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out transform-gpu will-change-transform"
                     loading="lazy"
                   />
                 </div>
                 {/* Clean Responsive Label */}
-                <span className="mt-1.5 sm:mt-2 text-[11px] sm:text-xs md:text-sm font-semibold text-stone-800 group-hover:text-maroon-700 transition-colors leading-tight">
+                <span className="mt-1.5 sm:mt-2 text-[11px] sm:text-xs md:text-sm font-semibold text-stone-800 group-hover:text-maroon-700 transition-colors duration-200 leading-tight">
                   {cat.shortName}
                 </span>
               </button>
@@ -253,12 +253,12 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           
           {/* Card 1: Traditional Telugu Recipes */}
-          <div className="bg-white rounded-2xl overflow-hidden border border-amber-200/80 shadow-traditional flex flex-col group hover:-translate-y-1 transition-all duration-300">
+          <div className="bg-white rounded-2xl overflow-hidden border border-amber-200/80 hover:border-amber-400/80 shadow-traditional hover:shadow-traditional-hover flex flex-col group hover:-translate-y-1.5 transition-[transform,box-shadow,border-color] duration-350 ease-out transform-gpu">
             <div className="relative aspect-[16/10] overflow-hidden bg-cream-200">
               <img 
                 src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=700&q=80" 
                 alt="Traditional Telugu Recipes" 
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover group-hover:scale-106 transition-transform duration-700 ease-out transform-gpu will-change-transform"
                 loading="lazy"
               />
             </div>
@@ -275,22 +275,22 @@ export default function Home() {
                 </p>
               </div>
               <Link 
-                to="/menu?category=snacks-sweets" 
+                to="/menu?category=sweets" 
                 className="inline-flex items-center gap-1.5 text-xs font-bold text-maroon-700 hover:text-gold-600 transition-colors group/link pt-1"
               >
-                <span>Explore Snacks &amp; Sweets</span>
-                <ArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform" />
+                <span>Explore Traditional Sweets</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-1.5 transition-transform duration-250 ease-out" />
               </Link>
             </div>
           </div>
 
           {/* Card 2: Wholesale Roti Supply (Featured Deep Maroon Card) */}
-          <div className="bg-maroon-700 text-white rounded-2xl overflow-hidden border-2 border-gold-400 shadow-xl flex flex-col group hover:-translate-y-1 transition-all duration-300 relative">
+          <div className="bg-maroon-700 text-white rounded-2xl overflow-hidden border-2 border-gold-400 hover:border-gold-300 shadow-xl hover:shadow-2xl flex flex-col group hover:-translate-y-1.5 transition-[transform,box-shadow,border-color] duration-350 ease-out relative transform-gpu">
             <div className="relative aspect-[16/10] overflow-hidden bg-maroon-900">
               <img 
                 src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=700&q=80" 
                 alt="Wholesale Bulk Roti Supply" 
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90"
+                className="w-full h-full object-cover group-hover:scale-106 transition-transform duration-700 ease-out opacity-90 transform-gpu will-change-transform"
                 loading="lazy"
               />
               <div className="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 bg-gold-500 text-maroon-950 text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full shadow">
@@ -311,22 +311,22 @@ export default function Home() {
               </div>
               <button
                 onClick={() => handleWhatsAppEnquiry("wholesale_rotis")}
-                className="inline-flex items-center gap-2 text-xs font-bold text-gold-300 hover:text-white transition-colors group/link pt-1"
+                className="inline-flex items-center gap-2 text-xs font-bold text-gold-300 hover:text-white transition-colors group/link pt-1 cursor-pointer"
               >
                 <WhatsAppIcon className="w-4 h-4 fill-current" />
                 <span>Enquire Bulk Rotis</span>
-                <ArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform" />
+                <ArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-1.5 transition-transform duration-250 ease-out" />
               </button>
             </div>
           </div>
 
           {/* Card 3: Prasadams & Pooja Essentials */}
-          <div className="bg-white rounded-2xl overflow-hidden border border-amber-200/80 shadow-traditional flex flex-col group hover:-translate-y-1 transition-all duration-300">
+          <div className="bg-white rounded-2xl overflow-hidden border border-amber-200/80 hover:border-amber-400/80 shadow-traditional hover:shadow-traditional-hover flex flex-col group hover:-translate-y-1.5 transition-[transform,box-shadow,border-color] duration-350 ease-out transform-gpu">
             <div className="relative aspect-[16/10] overflow-hidden bg-cream-200">
               <img 
                 src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=700&q=80" 
                 alt="Prasadams and Pooja Essentials" 
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover group-hover:scale-106 transition-transform duration-700 ease-out transform-gpu will-change-transform"
                 loading="lazy"
               />
             </div>
@@ -347,7 +347,7 @@ export default function Home() {
                 className="inline-flex items-center gap-1.5 text-xs font-bold text-maroon-700 hover:text-gold-600 transition-colors group/link pt-1"
               >
                 <span>View Prasadams</span>
-                <ArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform" />
+                <ArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-1.5 transition-transform duration-250 ease-out" />
               </Link>
             </div>
           </div>
@@ -384,11 +384,11 @@ export default function Home() {
 
         {/* Category Tabs */}
         <div className="flex items-center gap-2 overflow-x-auto pb-3 hide-scrollbar">
-          {CATEGORIES.slice(0, 5).map((cat) => (
+          {CATEGORIES.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setSelectedHomeCategory(cat.id)}
-              className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
+              className={`px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all cursor-pointer ${
                 selectedHomeCategory === cat.id
                   ? 'bg-maroon-700 text-white shadow-md'
                   : 'bg-white text-stone-700 hover:bg-cream-200 border border-amber-200'
@@ -397,12 +397,6 @@ export default function Home() {
               {cat.shortName}
             </button>
           ))}
-          <Link
-            to="/menu"
-            className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-semibold whitespace-nowrap bg-gold-100 text-gold-800 border border-gold-300 hover:bg-gold-200 transition-colors"
-          >
-            + All Categories
-          </Link>
         </div>
 
         {/* 8 Product Grid: 1 col on mobile, 2 on tablet, 3 on laptop, 4 on desktop */}
@@ -443,11 +437,11 @@ export default function Home() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6">
           
           {/* Reel Card 1 */}
-          <div className="group relative aspect-[9/14] sm:aspect-[9/15] rounded-xl sm:rounded-2xl overflow-hidden shadow-md border border-amber-200/60 bg-stone-900 cursor-pointer">
+          <div className="group relative aspect-[9/14] sm:aspect-[9/15] rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-amber-200/60 bg-stone-900 cursor-pointer transition-[transform,box-shadow] duration-350 ease-out hover:-translate-y-1.5 transform-gpu">
             <img 
               src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=600&q=80" 
               alt="Soft Wholesale Rotis Reel" 
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80"
+              className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out opacity-80 transform-gpu will-change-transform"
               loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
@@ -468,11 +462,11 @@ export default function Home() {
           </div>
 
           {/* Reel Card 2 */}
-          <div className="group relative aspect-[9/14] sm:aspect-[9/15] rounded-xl sm:rounded-2xl overflow-hidden shadow-md border border-amber-200/60 bg-stone-900 cursor-pointer">
+          <div className="group relative aspect-[9/14] sm:aspect-[9/15] rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-amber-200/60 bg-stone-900 cursor-pointer transition-[transform,box-shadow] duration-350 ease-out hover:-translate-y-1.5 transform-gpu">
             <img 
               src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=600&q=80" 
               alt="Traditional Sweets Reel" 
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80"
+              className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out opacity-80 transform-gpu will-change-transform"
               loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
@@ -493,11 +487,11 @@ export default function Home() {
           </div>
 
           {/* Reel Card 3 */}
-          <div className="group relative aspect-[9/14] sm:aspect-[9/15] rounded-xl sm:rounded-2xl overflow-hidden shadow-md border border-amber-200/60 bg-stone-900 cursor-pointer">
+          <div className="group relative aspect-[9/14] sm:aspect-[9/15] rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-amber-200/60 bg-stone-900 cursor-pointer transition-[transform,box-shadow] duration-350 ease-out hover:-translate-y-1.5 transform-gpu">
             <img 
               src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=600&q=80" 
               alt="Festive Prasadams Reel" 
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80"
+              className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out opacity-80 transform-gpu will-change-transform"
               loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
@@ -518,11 +512,11 @@ export default function Home() {
           </div>
 
           {/* Reel Card 4 */}
-          <div className="group relative aspect-[9/14] sm:aspect-[9/15] rounded-xl sm:rounded-2xl overflow-hidden shadow-md border border-amber-200/60 bg-stone-900 cursor-pointer">
+          <div className="group relative aspect-[9/14] sm:aspect-[9/15] rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-amber-200/60 bg-stone-900 cursor-pointer transition-[transform,box-shadow] duration-350 ease-out hover:-translate-y-1.5 transform-gpu">
             <img 
               src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80" 
               alt="Catering Setups Reel" 
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80"
+              className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out opacity-80 transform-gpu will-change-transform"
               loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>

@@ -177,7 +177,7 @@ export default function Catering() {
                   required
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="e.g. 9879687856"
+                  placeholder="e.g. 99893 65006"
                   className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 focus:border-maroon-700 focus:ring-1 focus:ring-maroon-700 text-base sm:text-sm text-stone-800 bg-cream-50 focus:bg-white transition-all outline-none"
                 />
               </div>
@@ -308,8 +308,8 @@ export default function Catering() {
               {cateringPackages.map((pkg, idx) => (
                 <div
                   key={idx}
-                  className={`bg-white rounded-2xl p-4 sm:p-6 border transition-all duration-300 shadow-traditional hover:shadow-xl ${
-                    pkg.popular ? 'border-2 border-gold-400' : 'border border-amber-200/90'
+                  className={`bg-white rounded-2xl p-4 sm:p-6 border transition-[transform,box-shadow,border-color] duration-350 ease-out hover:-translate-y-1 transform-gpu shadow-traditional hover:shadow-traditional-hover ${
+                    pkg.popular ? 'border-2 border-gold-400 hover:border-gold-500' : 'border border-amber-200/90 hover:border-amber-300'
                   }`}
                 >
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-amber-100 pb-3">

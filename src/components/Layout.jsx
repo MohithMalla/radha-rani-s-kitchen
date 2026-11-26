@@ -4,6 +4,8 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import FloatingWhatsApp from './FloatingWhatsApp';
 import ScrollToTop from './ScrollToTop';
+import OrderDrawer from './OrderDrawer';
+import FloatingOrderBar from './FloatingOrderBar';
 
 export default function Layout() {
   return (
@@ -15,6 +17,8 @@ export default function Layout() {
       </main>
       <Footer />
       <FloatingWhatsApp />
+      <FloatingOrderBar />
+      <OrderDrawer />
     </div>
   );
 }

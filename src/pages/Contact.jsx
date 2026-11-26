@@ -28,7 +28,7 @@ export default function Contact() {
   const handleQuickWhatsAppSubmit = (e) => {
     e.preventDefault();
     const lines = [
-      `Hello Radha Rani's Kitchen,`,
+      `Namaste Radha Rani's Kitchen!`,
       ``,
       `I am submitting an enquiry from your website:`,
       `--------------------------------------`,
@@ -256,7 +256,7 @@ export default function Contact() {
                   required
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="e.g. 9879687856"
+                  placeholder="e.g. 99893 65006"
                   className="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 focus:border-maroon-700 focus:ring-1 focus:ring-maroon-700 text-base sm:text-sm text-stone-800 bg-cream-50 focus:bg-white transition-all outline-none"
                 />
               </div>
