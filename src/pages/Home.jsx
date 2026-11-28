@@ -48,14 +48,14 @@ export default function Home() {
               <button
                 key={cat.id}
                 onClick={() => navigate(`/menu?category=${cat.id}`)}
-                className="flex flex-col items-center shrink-0 w-[74px] sm:w-[94px] md:w-[110px] lg:w-[120px] group cursor-pointer text-center focus:outline-none transition-transform duration-300 ease-out hover:-translate-y-1.5 transform-gpu"
+                className="flex flex-col items-center shrink-0 w-[74px] sm:w-[94px] md:w-[110px] lg:w-[120px] group cursor-pointer text-center focus:outline-none"
               >
                 {/* Circular Food Image */}
-                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-22 md:h-22 lg:w-24 lg:h-24 rounded-full overflow-hidden shadow-md group-hover:shadow-xl transition-[box-shadow,ring] duration-350 ease-out ring-2 ring-amber-300/70 group-hover:ring-maroon-700 bg-cream-200 transform-gpu">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-22 md:h-22 lg:w-24 lg:h-24 rounded-full overflow-hidden shadow-md group-hover:shadow-xl transition-[box-shadow,ring] duration-350 ease-out ring-2 ring-amber-300/70 group-hover:ring-maroon-700 bg-cream-200">
                   <img 
                     src={cat.image} 
                     alt={cat.name} 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out transform-gpu will-change-transform"
+                    className="w-full h-full object-cover scale-[1.08] group-hover:scale-115 group-hover:rotate-3 transition-transform duration-500 ease-out transform-gpu will-change-transform"
                     loading="lazy"
                   />
                 </div>
@@ -158,7 +158,69 @@ export default function Home() {
       </section>
 
       {/* ========================================================
-          3. "WHY CHOOSE RADHA RANI'S KITCHEN?" BAND
+          3. "OUR SPECIALTIES" PREVIEW GRID (8 Featured Items)
+          Responsive 1-col (mobile) -> 2-col (tablet) -> 3/4-col (desktop)
+      ======================================================== */}
+      <section className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2.5 mb-5 sm:mb-7">
+          <div>
+            <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gold-600">
+              Kitchen Highlights
+            </span>
+            <h2 className="font-serif font-bold text-2xl sm:text-3xl md:text-4xl text-maroon-800 mt-0.5">
+              Our Specialties
+            </h2>
+            <p className="text-stone-600 text-xs sm:text-sm mt-0.5">
+              Freshly prepared daily with guaranteed pure vegetarian authenticity.
+            </p>
+          </div>
+
+          <Link
+            to="/menu"
+            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-maroon-700 hover:text-gold-600 transition-colors shrink-0"
+          >
+            <span>View Complete Menu ({PRODUCTS.length}+ Items)</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+
+        {/* Category Tabs */}
+        <div className="flex items-center gap-2 overflow-x-auto pb-3 hide-scrollbar">
+          {CATEGORIES.map((cat) => (
+            <button
+              key={cat.id}
+              onClick={() => setSelectedHomeCategory(cat.id)}
+              className={`px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all cursor-pointer ${
+                selectedHomeCategory === cat.id
+                  ? 'bg-maroon-700 text-white shadow-md'
+                  : 'bg-white text-stone-700 hover:bg-cream-200 border border-amber-200'
+              }`}
+            >
+              {cat.shortName}
+            </button>
+          ))}
+        </div>
+
+        {/* 8 Product Grid: 1 col on mobile, 2 on tablet, 3 on laptop, 4 on desktop */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6 mt-3">
+          {featuredProducts.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+
+        <div className="text-center mt-6 sm:mt-8 md:mt-10">
+          <Link
+            to="/menu"
+            className="inline-flex items-center gap-2 bg-maroon-700 hover:bg-maroon-800 text-white px-5 sm:px-8 py-2.5 sm:py-3.5 rounded-xl font-bold text-xs sm:text-sm shadow-md transition-transform hover:-translate-y-0.5 active:scale-98"
+          >
+            <span>Explore All 7 Services on Menu</span>
+            <ArrowRight className="w-4 h-4 text-gold-300" />
+          </Link>
+        </div>
+      </section>
+
+      {/* ========================================================
+          4. "WHY CHOOSE RADHA RANI'S KITCHEN?" BAND
           Responsive grid for mobile (2 col) to desktop (5 col)
       ======================================================== */}
       <section className="bg-maroon-700 text-white py-8 sm:py-12 px-3 sm:px-4 shadow-xl relative overflow-hidden">
@@ -235,7 +297,7 @@ export default function Home() {
       </section>
 
       {/* ========================================================
-          4. "CRAFTED WITH CARE" 3-CARD BENTO SECTION
+          5. "CRAFTED WITH CARE" 3-CARD BENTO SECTION
       ======================================================== */}
       <section className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="text-center space-y-1 mb-6 sm:mb-8 md:mb-10">
@@ -324,7 +386,7 @@ export default function Home() {
           <div className="bg-white rounded-2xl overflow-hidden border border-amber-200/80 hover:border-amber-400/80 shadow-traditional hover:shadow-traditional-hover flex flex-col group hover:-translate-y-1.5 transition-[transform,box-shadow,border-color] duration-350 ease-out transform-gpu">
             <div className="relative aspect-[16/10] overflow-hidden bg-cream-200">
               <img 
-                src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=700&q=80" 
+                src="/prasadams.png" 
                 alt="Prasadams and Pooja Essentials" 
                 className="w-full h-full object-cover group-hover:scale-106 transition-transform duration-700 ease-out transform-gpu will-change-transform"
                 loading="lazy"
@@ -352,68 +414,6 @@ export default function Home() {
             </div>
           </div>
 
-        </div>
-      </section>
-
-      {/* ========================================================
-          5. "OUR SPECIALTIES" PREVIEW GRID (8 Featured Items)
-          Responsive 1-col (mobile) -> 2-col (tablet) -> 3/4-col (desktop)
-      ======================================================== */}
-      <section className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2.5 mb-5 sm:mb-7">
-          <div>
-            <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gold-600">
-              Kitchen Highlights
-            </span>
-            <h2 className="font-serif font-bold text-2xl sm:text-3xl md:text-4xl text-maroon-800 mt-0.5">
-              Our Specialties
-            </h2>
-            <p className="text-stone-600 text-xs sm:text-sm mt-0.5">
-              Freshly prepared daily with guaranteed pure vegetarian authenticity.
-            </p>
-          </div>
-
-          <Link
-            to="/menu"
-            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-maroon-700 hover:text-gold-600 transition-colors shrink-0"
-          >
-            <span>View Complete Menu (28+ Items)</span>
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-
-        {/* Category Tabs */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-3 hide-scrollbar">
-          {CATEGORIES.map((cat) => (
-            <button
-              key={cat.id}
-              onClick={() => setSelectedHomeCategory(cat.id)}
-              className={`px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all cursor-pointer ${
-                selectedHomeCategory === cat.id
-                  ? 'bg-maroon-700 text-white shadow-md'
-                  : 'bg-white text-stone-700 hover:bg-cream-200 border border-amber-200'
-              }`}
-            >
-              {cat.shortName}
-            </button>
-          ))}
-        </div>
-
-        {/* 8 Product Grid: 1 col on mobile, 2 on tablet, 3 on laptop, 4 on desktop */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6 mt-3">
-          {featuredProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
-
-        <div className="text-center mt-6 sm:mt-8 md:mt-10">
-          <Link
-            to="/menu"
-            className="inline-flex items-center gap-2 bg-maroon-700 hover:bg-maroon-800 text-white px-5 sm:px-8 py-2.5 sm:py-3.5 rounded-xl font-bold text-xs sm:text-sm shadow-md transition-transform hover:-translate-y-0.5 active:scale-98"
-          >
-            <span>Explore All 7 Services on Menu</span>
-            <ArrowRight className="w-4 h-4 text-gold-300" />
-          </Link>
         </div>
       </section>
 
@@ -489,7 +489,7 @@ export default function Home() {
           {/* Reel Card 3 */}
           <div className="group relative aspect-[9/14] sm:aspect-[9/15] rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-amber-200/60 bg-stone-900 cursor-pointer transition-[transform,box-shadow] duration-350 ease-out hover:-translate-y-1.5 transform-gpu">
             <img 
-              src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=600&q=80" 
+              src="/prasadams.png" 
               alt="Festive Prasadams Reel" 
               className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out opacity-80 transform-gpu will-change-transform"
               loading="lazy"

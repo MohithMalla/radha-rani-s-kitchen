@@ -23,7 +23,7 @@ export const CATEGORIES = [
     name: "Traditional Sweets",
     shortName: "Sweets",
     icon: "Cookie",
-    image: "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=600&q=80",
+    image: "/sweets.jpg",
     description: "Authentic Telugu sweets made with pure cow ghee, organic bellam (jaggery), and dry fruits: Sunnundalu, Ariselu, Laddus, Gavvalu & Bakshalu."
   },
   {
@@ -31,7 +31,7 @@ export const CATEGORIES = [
     name: "Traditional Snacks",
     shortName: "Snacks",
     icon: "Sparkles",
-    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80",
+    image: "/snacks.jpg",
     description: "Crispy Telangana homemade savouries: Sakinalu, Pappu Chekkalu, Murukulu, Karapusa, Boondi, Chekkodi, and Matka Atukulu."
   },
   {
@@ -39,7 +39,7 @@ export const CATEGORIES = [
     name: "Traditional Pickles",
     shortName: "Pickles",
     icon: "Flame",
-    image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80",
+    image: "/pickles.jpg",
     description: "Homestyle Telangana nilva pachallu made with stone-ground mustard, fenugreek, and cold-pressed oil: Avakaya, Gongura, Tomato, Amla, Lemon & more."
   },
   {
@@ -47,7 +47,7 @@ export const CATEGORIES = [
     name: "Homemade Podis",
     shortName: "Podis",
     icon: "Utensils",
-    image: "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=600&q=80",
+    image: "/podis.jpg",
     description: "Aromatic traditional Telugu rice and tiffin podis: Karivepaku, Palli, Munagaku, Kandi, Gongura, Kobbari, and Nuvvula Karam."
   },
   {
@@ -55,7 +55,7 @@ export const CATEGORIES = [
     name: "Wholesale Roti Supply",
     shortName: "Wholesale Rotis",
     icon: "Wheat",
-    image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=600&q=80",
+    image: "/wholesale-rotis.png",
     description: "Daily soft Wheat Phulkas, Chapatis & Jowar Rotis delivered hot and fresh to hostels, messes, hotels & caterers across Warangal & Hanamkonda."
   },
   {
@@ -63,7 +63,7 @@ export const CATEGORIES = [
     name: "Prasadams & Meals",
     shortName: "Prasadams",
     icon: "Heart",
-    image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80",
+    image: "/prasadams.png",
     description: "Sacred temple-style offerings prepared with madi (ritual purity): Temple Pulihora, Chakkera Pongali, Daddojanam, and pure veg homestyle thalis."
   }
 ];
@@ -83,7 +83,7 @@ export const PRODUCTS = [
     startingPrice: 120,
     priceUnit: "250 g",
     description: "Classic Telugu festival sweet crafted with golden gram flour pearls, cardamom infusion, pure ghee aroma, and crunchy cashews.",
-    image: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=700&q=80",
+    image: "https://3.imimg.com/data3/XX/XC/MY-3450045/boondhi-laddu-1000x1000.jpg",
     packOptions: ["250 g - ₹120", "500 g - ₹200", "1 kg - ₹370"],
     prices: { "250 g": 120, "500 g": 200, "1 kg": 370 },
     idealFor: "Festivals, Weddings, Housewarmings & Gifting"
@@ -99,7 +99,7 @@ export const PRODUCTS = [
     startingPrice: 140,
     priceUnit: "250 g",
     description: "Rich, slow-roasted besan (gram flour) blended with aromatic pure cow ghee, sugar crystals, and toasted nuts.",
-    image: "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=700&q=80",
+    image: "https://3.bp.blogspot.com/-3JIVmqaHWiA/W4OC9Xi2k_I/AAAAAAAAIuI/b_gIiS-e_K4LgRGPHWeiY2xkBvT1CvHrgCLcBGAs/s1600/Besan+Ladoo+Recipe+Festive+Sweet+4.jpg",
     packOptions: ["250 g - ₹140", "500 g - ₹220", "1 kg - ₹400"],
     prices: { "250 g": 140, "500 g": 220, "1 kg": 400 },
     idealFor: "Family Sweets Box, Kids Tiffin & Festive Gifting"
@@ -115,7 +115,7 @@ export const PRODUCTS = [
     startingPrice: 100,
     priceUnit: "250 g",
     description: "Traditional roasted sesame seeds bound with organic iron-rich Telangana jaggery. Wholesome and warming winter delicacy.",
-    image: "https://images.unsplash.com/photo-1514733670139-4d87a1941d55?auto=format&fit=crop&w=700&q=80",
+    image: "https://1.bp.blogspot.com/-xH9rgeuzFDw/XPunyZ6n2fI/AAAAAAABSQw/fTv4WlCQsK8H8G2mgIHxTf1zEYrNTvu_gCLcBGAs/s1600/What%2Bare%2BThe%2Bhealth%2Bbenefits%2Bfor%2BSesame%2BSeeds.jpg",
     packOptions: ["250 g - ₹100", "500 g - ₹180", "1 kg - ₹350"],
     prices: { "250 g": 100, "500 g": 180, "1 kg": 350 },
     idealFor: "Daily Healthy Snack, Sankranti & Immunity"
@@ -131,7 +131,7 @@ export const PRODUCTS = [
     startingPrice: 350,
     priceUnit: "250 g",
     description: "Premium energy-packed laddu rolled with almonds, cashews, pistachios, dates, figs, and pure cow ghee. Zero white sugar.",
-    image: "https://images.unsplash.com/photo-1596560548464-f010549b84d7?auto=format&fit=crop&w=700&q=80",
+    image: "https://img.freepik.com/premium-photo/indian-sweet-healthy-dry-fruit-laddu-laddoo_466689-97123.jpg?w=2000",
     packOptions: ["250 g - ₹350", "500 g - ₹600", "1 kg - ₹1,000"],
     prices: { "250 g": 350, "500 g": 600, "1 kg": 1000 },
     idealFor: "VIP Gifting, Health Conscious, Postpartum & Elders"
@@ -147,7 +147,7 @@ export const PRODUCTS = [
     startingPrice: 120,
     priceUnit: "250 g",
     description: "Unique mango-infused sweet laddu balancing natural fruit sweetness, cardamoms, and melt-in-mouth texture.",
-    image: "https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&w=700&q=80",
+    image: "https://www.clubmahindra.com/blog/images/Bhonge-Laddu-resized.jpg",
     packOptions: ["250 g - ₹120", "500 g - ₹200", "1 kg - ₹350"],
     prices: { "250 g": 120, "500 g": 200, "1 kg": 350 },
     idealFor: "Seasonal Treat, Children & Dessert Platters"
@@ -163,7 +163,7 @@ export const PRODUCTS = [
     startingPrice: 120,
     priceUnit: "250 g",
     description: "Juicy grated fresh coconut simmered in caramelized sugar or jaggery with crushed cardamom and pure ghee.",
-    image: "https://images.unsplash.com/photo-1544378730-8b5104b18790?auto=format&fit=crop&w=700&q=80",
+    image: "https://tse3.mm.bing.net/th/id/OIP.XfMNqSgcWjBTGL-wg5p4ngHaHg?r=0&pid=Api&h=220&P=0",
     packOptions: ["250 g - ₹120", "500 g - ₹200", "1 kg - ₹370"],
     prices: { "250 g": 120, "500 g": 200, "1 kg": 370 },
     idealFor: "Pooja Offerings, Vratams & Authentic Telugu Celebrations"
@@ -179,7 +179,7 @@ export const PRODUCTS = [
     startingPrice: 140,
     priceUnit: "250 g",
     description: "Crunchy roasted peanuts bound with bellam (organic jaggery) into traditional chikki-style balls. High protein snack.",
-    image: "https://images.unsplash.com/photo-1527515862127-a4fc05baf7a5?auto=format&fit=crop&w=700&q=80",
+    image: "https://5.imimg.com/data5/XN/LQ/UU/SELLER-69989860/palli-laddu-1000x1000.jpg",
     packOptions: ["250 g - ₹140", "500 g - ₹220", "1 kg - ₹400"],
     prices: { "250 g": 140, "500 g": 220, "1 kg": 400 },
     idealFor: "Everyday Energy, Teatime & Travel Snack"
@@ -195,7 +195,7 @@ export const PRODUCTS = [
     startingPrice: 120,
     priceUnit: "250 g",
     description: "Wholesome whole wheat flour gently roasted with cow ghee and sweetened with raw jaggery. Wholesome homestyle recipe.",
-    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=80",
+    image: "https://www.cookwithkushi.com/wp-content/uploads/2021/08/IMG_9283f-768x1089.jpg",
     packOptions: ["250 g - ₹120", "500 g - ₹200", "1 kg - ₹370"],
     prices: { "250 g": 120, "500 g": 200, "1 kg": 370 },
     idealFor: "Daily Family Nutrition & Traditional Teatime"
@@ -211,7 +211,7 @@ export const PRODUCTS = [
     startingPrice: 130,
     priceUnit: "250 g",
     description: "Nutritious finger millet (ragi) slow-cooked in pure cow ghee and blended with mineral-rich jaggery and chopped nuts.",
-    image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=700&q=80",
+    image: "https://tse2.mm.bing.net/th/id/OIP.W-QPieM5-iOehLfNtmO6egHaF9?r=0&pid=Api&h=220&P=0",
     packOptions: ["250 g - ₹130", "500 g - ₹230", "1 kg - ₹390"],
     prices: { "250 g": 130, "500 g": 230, "1 kg": 390 },
     idealFor: "Calcium & Iron Boost, Kids & Diabetic Friendly Choice"
@@ -227,7 +227,7 @@ export const PRODUCTS = [
     startingPrice: 190,
     priceUnit: "250 g",
     description: "Andhra & Telangana's pride: roasted urad dal (minapa gundlu) stone-ground and hand-rolled with pure melted desi cow ghee and jaggery.",
-    image: "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=700&q=80",
+    image: "https://3.bp.blogspot.com/-uNgFhwUs7p4/TrvZtUHkbBI/AAAAAAAADAM/yRg_FSMbrw8/s1600/sunnundalu.JPG",
     packOptions: ["250 g - ₹190", "500 g - ₹239", "1 kg - ₹450"],
     prices: { "250 g": 190, "500 g": 239, "1 kg": 450 },
     idealFor: "Weddings, Seemantham, Festivals & Pure Ghee Lovers"
@@ -243,7 +243,7 @@ export const PRODUCTS = [
     startingPrice: 130,
     priceUnit: "250 g",
     description: "Shell-shaped crunchy flour crisps with crushed roasted peanuts, coated in sticky jaggery syrup.",
-    image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=700&q=80",
+    image: "https://ahahomefoods.com/wp-content/uploads/2023/02/Gavvalu-Bellam-Andhra-Style.jpg",
     packOptions: ["250 g - ₹130", "500 g - ₹200", "1 kg - ₹370"],
     prices: { "250 g": 130, "500 g": 200, "1 kg": 370 },
     idealFor: "Festival Snack Boxes, Teatime Crunch"
@@ -259,7 +259,7 @@ export const PRODUCTS = [
     startingPrice: 120,
     priceUnit: "250 g",
     description: "Classic shell-shaped sweets dotted with toasted sesame seeds and glazed in thick aromatic jaggery syrup.",
-    image: "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=700&q=80",
+    image: "https://honeyharvest.in/cdn/shop/files/gavvalu_hot_2x_45640dfb-2fee-4120-96c1-d623be9ba942.webp?v=1712227085",
     packOptions: ["250 g - ₹120", "500 g - ₹200", "1 kg - ₹370"],
     prices: { "250 g": 120, "500 g": 200, "1 kg": 370 },
     idealFor: "Traditional Telugu Gifting & Sankranti Festivities"
@@ -275,7 +275,7 @@ export const PRODUCTS = [
     startingPrice: 110,
     priceUnit: "250 g",
     description: "Crunchy sweet gavvalu prepared with fresh grated coconut essence and sweet caramelized glaze.",
-    image: "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&w=700&q=80",
+    image: "https://amramphalam.com/cdn/shop/files/ChatGPTImageMar25_2026_11_23_59PM.png?v=1774506273&width=1445",
     packOptions: ["250 g - ₹110", "500 g - ₹190", "1 kg - ₹350"],
     prices: { "250 g": 110, "500 g": 190, "1 kg": 350 },
     idealFor: "Kids Favorite, Sweet Crunch & Teatime"
@@ -291,7 +291,7 @@ export const PRODUCTS = [
     startingPrice: 130,
     priceUnit: "250 g",
     description: "Crispy multi-layered pastry rolls fried to golden perfection and soaked in cardamom-flavored sugar syrup.",
-    image: "https://images.unsplash.com/photo-1599785209707-a456fc1337bb?auto=format&fit=crop&w=700&q=80",
+    image: "https://tse2.mm.bing.net/th/id/OIP.-K9o7ifHJO_hXyzZlJgiJgHaEK?r=0&pid=Api&h=220&P=0",
     packOptions: ["250 g - ₹130", "500 g - ₹280", "1 kg - ₹500"],
     prices: { "250 g": 130, "500 g": 280, "1 kg": 500 },
     idealFor: "Weddings, Functions, Celebrations & Traditional Feast"
@@ -307,7 +307,7 @@ export const PRODUCTS = [
     startingPrice: 130,
     priceUnit: "250 g",
     description: "Soft, juicy kaja with a melt-in-mouth creamy malai center and rich saffron-cardamom syrup coating.",
-    image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=700&q=80",
+    image: "https://i.ytimg.com/vi/2YfedGAlHL8/maxresdefault.jpg",
     packOptions: ["250 g - ₹130", "500 g - ₹280", "1 kg - ₹500"],
     prices: { "250 g": 130, "500 g": 280, "1 kg": 500 },
     idealFor: "Grand Feasts, Royal Telugu Hospitality & Gifting"
@@ -323,7 +323,7 @@ export const PRODUCTS = [
     startingPrice: 120,
     priceUnit: "250 g",
     description: "Authentic Andhra & Telangana jaggery shell sweet. Deep golden crunch enveloped in dark, glossy aged jaggery.",
-    image: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=700&q=80",
+    image: "https://ukfoods.in/wp-content/uploads/2025/08/d6b037a1-cd30-4f03-a763-b21a8a1b0e77.__CR00970600_PT0_SX970_V1___.jpg",
     packOptions: ["250 g - ₹120", "500 g - ₹200", "1 kg - ₹370"],
     prices: { "250 g": 120, "500 g": 200, "1 kg": 370 },
     idealFor: "Traditional Teatime, Festive Hampers & Children"
@@ -339,7 +339,7 @@ export const PRODUCTS = [
     startingPrice: 110,
     priceUnit: "250 g",
     description: "Light, crispy shell sweets coated with a thin crystalline sugar crust. Classic nostalgic tea snack.",
-    image: "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=700&q=80",
+    image: "https://i.ytimg.com/vi/3XFQlJ55-3o/maxresdefault.jpg",
     packOptions: ["250 g - ₹110", "500 g - ₹180", "1 kg - ₹250"],
     prices: { "250 g": 110, "500 g": 180, "1 kg": 250 },
     idealFor: "Crispy Sweet Snacking & Afternoon Teatime"
@@ -355,7 +355,7 @@ export const PRODUCTS = [
     startingPrice: 12,
     priceUnit: "piece",
     description: "Thin, soft flatbreads stuffed with sweet chana dal & jaggery pooranam, roasted gently with pure desi cow ghee. Just ₹12 per piece.",
-    image: "https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=700&q=80",
+    image: "https://vellankifoods.com/cdn/shop/products/bobbatlu_bakshalu.jpg?v=1690019740",
     packOptions: ["Pack of 10 - ₹120", "Pack of 20 - ₹240", "Pack of 50 - ₹600", "Bulk Catering Pack"],
     prices: { "Pack of 10": 120, "Pack of 20": 240, "Pack of 50": 600 },
     idealFor: "Ugadi, Varalakshmi Vratam, Weddings & Housewarmings"
@@ -371,7 +371,7 @@ export const PRODUCTS = [
     startingPrice: 239,
     priceUnit: "500 g",
     description: "Traditional Telugu soaked rice and sugar flat patties, deep-fried in pure ghee and topped with toasted sesame seeds.",
-    image: "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=700&q=80",
+    image: "https://res.cloudinary.com/dffpmspl1/image/upload/f_auto,q_auto:eco,w_1200/v1759660069/maxresdefault_v4qfh6.jpg",
     packOptions: ["500 g - ₹239", "1 kg - ₹450"],
     prices: { "500 g": 239, "1 kg": 450 },
     idealFor: "Festivals, Marriages & Pithru Pooja Offerings"
@@ -387,7 +387,7 @@ export const PRODUCTS = [
     startingPrice: 350,
     priceUnit: "500 g",
     description: "The crown jewel of Telangana festivals: soft, chewy rice flour patties prepared with organic jaggery, pure desi ghee, and sesame.",
-    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=700&q=80",
+    image: "https://tse4.mm.bing.net/th/id/OIP.bVzVWCvU2YHVaF4MBcvqOAHaGq?r=0&pid=Api&h=220&P=0",
     packOptions: ["500 g - ₹350", "1 kg - ₹570"],
     prices: { "500 g": 350, "1 kg": 570 },
     idealFor: "Sankranti, Telugu Weddings & Sacred Traditional Gifting"
@@ -407,7 +407,7 @@ export const PRODUCTS = [
     startingPrice: 100,
     priceUnit: "250 g",
     description: "Crispy spiced gram flour pearls tossed with fragrant curry leaves, roasted peanuts, and mild red chili powder.",
-    image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=700&q=80",
+    image: "https://img.freepik.com/premium-photo/kara-boondi-bundi-traditional-indian-namkeen-snack-important-chat-item-served-bowl-selective-focus_726363-853.jpg?w=2000",
     packOptions: ["250 g - ₹100", "500 g - ₹190", "1 kg - ₹350"],
     prices: { "250 g": 100, "500 g": 190, "1 kg": 350 },
     idealFor: "Raita Topping, Sambar Rice Crunch & Evening Snack"
@@ -423,7 +423,7 @@ export const PRODUCTS = [
     startingPrice: 100,
     priceUnit: "250 g",
     description: "Fine, delicate crunchy sev strands pressed with ajwain (vaamu), cumin, and mild chili. Light, airy and addictive.",
-    image: "https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&w=700&q=80",
+    image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2020/11/sev-recipe-1.jpg",
     packOptions: ["250 g - ₹100", "500 g - ₹190", "1 kg - ₹350"],
     prices: { "250 g": 100, "500 g": 190, "1 kg": 350 },
     idealFor: "Chaat Topping, Teatime Munch & Kids Lunchbox"
@@ -439,7 +439,7 @@ export const PRODUCTS = [
     startingPrice: 100,
     priceUnit: "250 g",
     description: "Telangana's quintessential heritage snack: hand-coiled concentric rings of freshly soaked rice flour, sesame seeds, and ajwain. Crispy & oil-free feel.",
-    image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=700&q=80",
+    image: "https://savithrammas.com/site/image/cache/catalog/products/Pachi-Karam-Sakinalu/Pachi%20Karam%20Sakinalu%201-800x800.jpg",
     packOptions: ["250 g - ₹100", "500 g - ₹170", "1 kg - ₹320"],
     prices: { "250 g": 100, "500 g": 170, "1 kg": 320 },
     idealFor: "Sankranti, Authentic Warangal Gift & Teatime"
@@ -455,7 +455,7 @@ export const PRODUCTS = [
     startingPrice: 100,
     priceUnit: "250 g",
     description: "Wholesome combination of crisp sev, crunchy boondi, fried peanuts, roasted chana dal, and curry leaves spiced with Guntur chili.",
-    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=700&q=80",
+    image: "https://www.karkarafoods.com/media/items/Mixture/telangana-snack-mixture-1.jpeg",
     packOptions: ["250 g - ₹100", "500 g - ₹190", "1 kg - ₹350"],
     prices: { "250 g": 100, "500 g": 190, "1 kg": 350 },
     idealFor: "Evening Chai, Travel Snacking & Party Bowls"
@@ -471,7 +471,7 @@ export const PRODUCTS = [
     startingPrice: 100,
     priceUnit: "250 g",
     description: "Crunchy rice flour discs embedded with soaked chana dal, crushed cumin, and fresh curry leaves. Extra crispy snap.",
-    image: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=700&q=80",
+    image: "https://tse1.mm.bing.net/th/id/OIP.shjvS1KiruNezou11fY0VQHaFH?r=0&pid=Api&h=220&P=0",
     packOptions: ["250 g - ₹100", "500 g - ₹190", "1 kg - ₹350"],
     prices: { "250 g": 100, "500 g": 190, "1 kg": 350 },
     idealFor: "Curd Rice Partner, Rainy Days & Teatime"
@@ -487,7 +487,7 @@ export const PRODUCTS = [
     startingPrice: 100,
     priceUnit: "250 g",
     description: "Crispy homemade rice patties generously dotted with toasted sesame seeds for an earthy, nutty crunch in every bite.",
-    image: "https://images.unsplash.com/photo-1514733670139-4d87a1941d55?auto=format&fit=crop&w=700&q=80",
+    image: "https://www.godavarivantillu.com/cdn/shop/files/NuvvulaChekkalu_360x.png?v=1709709972",
     packOptions: ["250 g - ₹100", "500 g - ₹170", "1 kg - ₹320"],
     prices: { "250 g": 100, "500 g": 170, "1 kg": 320 },
     idealFor: "Festivals, Healthy Teatime & Travel Snack"
@@ -503,7 +503,7 @@ export const PRODUCTS = [
     startingPrice: 100,
     priceUnit: "250 g",
     description: "Traditional savory rice crackers studded with halved roasted peanuts and mild spices. Irresistibly crunchy.",
-    image: "https://images.unsplash.com/photo-1527515862127-a4fc05baf7a5?auto=format&fit=crop&w=700&q=80",
+    image: "https://i.pinimg.com/originals/f2/6a/98/f26a98668b676119efd1cdf3aea5c5c7.jpg",
     packOptions: ["250 g - ₹100", "500 g - ₹190", "1 kg - ₹350"],
     prices: { "250 g": 100, "500 g": 190, "1 kg": 350 },
     idealFor: "Kids Tiffin Box, Office Desk Snacking"
@@ -519,7 +519,7 @@ export const PRODUCTS = [
     startingPrice: 100,
     priceUnit: "250 g",
     description: "Savory shell-shaped crunchy flour bites spiced with crushed red chili, cumin, and sea salt. A spicy twist on classic gavvalu.",
-    image: "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=700&q=80",
+    image: "https://padmavathifoods.in/cdn/shop/files/karamgavval.png?v=1773572602&width=720",
     packOptions: ["250 g - ₹100", "500 g - ₹170", "1 kg - ₹320"],
     prices: { "250 g": 100, "500 g": 170, "1 kg": 320 },
     idealFor: "Spice Lovers, Rainy Evening Snacking with Hot Chai"
@@ -535,7 +535,7 @@ export const PRODUCTS = [
     startingPrice: 100,
     priceUnit: "250 g",
     description: "Crispy spiral coils made with stone-ground rice and urad dal flour, lightly seasoned with butter, hing, and ajwain.",
-    image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=700&q=80",
+    image: "https://www.cookwithkushi.com/wp-content/uploads/2022/09/best_chakli_murukku_recipe_Indian_snack_recipe.jpg",
     packOptions: ["250 g - ₹100", "500 g - ₹170", "1 kg - ₹320"],
     prices: { "250 g": 100, "500 g": 170, "1 kg": 320 },
     idealFor: "Diwali, Sankranti, Puja Gatherings & Daily Snacking"
@@ -551,7 +551,7 @@ export const PRODUCTS = [
     startingPrice: 100,
     priceUnit: "250 g",
     description: "Traditional gram flour savory sticks with coarse texture, spiced with cumin, chili and crispy curry leaves.",
-    image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=700&q=80",
+    image: "https://sritelanganapindivantalu.com/wp-content/uploads/2025/10/IMG_9617Murukulu-500-1-scaled.jpg",
     packOptions: ["250 g - ₹100", "500 g - ₹190", "1 kg - ₹350"],
     prices: { "250 g": 100, "500 g": 190, "1 kg": 350 },
     idealFor: "Traditional Telugu Snacking & Teatime"
@@ -567,7 +567,7 @@ export const PRODUCTS = [
     startingPrice: 100,
     priceUnit: "250 g",
     description: "Nutritious jowar (sorghum) flour savory sticks crafted with zero wheat, seasoned with roasted spices for a healthy crunch.",
-    image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=700&q=80",
+    image: "https://i.ytimg.com/vi/0C2bg36wZqc/maxresdefault.jpg",
     packOptions: ["250 g - ₹100", "500 g - ₹170", "1 kg - ₹320"],
     prices: { "250 g": 100, "500 g": 170, "1 kg": 320 },
     idealFor: "Millet Enthusiasts, Gluten-Aware & Teatime"
@@ -583,7 +583,7 @@ export const PRODUCTS = [
     startingPrice: 100,
     priceUnit: "250 g",
     description: "Golden crispy rings made with seasoned rice dough, sesame seeds, and crushed chili. Crispy, addictive and nostalgic.",
-    image: "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=700&q=80",
+    image: "https://3.bp.blogspot.com/-y80gCrwUXNE/UnHuKioSLXI/AAAAAAAAjkg/10eyOvZVwSs/s1600/r+three+s+s.jpg",
     packOptions: ["250 g - ₹100", "500 g - ₹170", "1 kg - ₹330"],
     prices: { "250 g": 100, "500 g": 170, "1 kg": 330 },
     idealFor: "School Tiffin, Road Trips & Teatime Munch"
@@ -599,7 +599,7 @@ export const PRODUCTS = [
     startingPrice: 100,
     priceUnit: "250 g",
     description: "Thinly sliced fresh potatoes, golden-fried in clean oil and lightly seasoned with rock salt and mild chili.",
-    image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=700&q=80",
+    image: "https://i.ytimg.com/vi/orr-c4liISk/maxresdefault.jpg",
     packOptions: ["250 g - ₹100", "500 g - ₹190", "1 kg - ₹350"],
     prices: { "250 g": 100, "500 g": 190, "1 kg": 350 },
     idealFor: "All-Age Snacking, Parties & Sambar Rice Crunch"
@@ -615,7 +615,7 @@ export const PRODUCTS = [
     startingPrice: 100,
     priceUnit: "250 g",
     description: "Light roasted flattened rice flakes tossed with turmeric, mustard seeds, curry leaves, green chilies, and crunchy peanuts.",
-    image: "https://images.unsplash.com/photo-1579113800032-c38bd7635818?auto=format&fit=crop&w=700&q=80",
+    image: "https://i.ytimg.com/vi/54SOVCZ_fn8/maxresdefault.jpg",
     packOptions: ["250 g - ₹100", "500 g - ₹190", "1 kg - ₹350"],
     prices: { "250 g": 100, "500 g": 190, "1 kg": 350 },
     idealFor: "Low Calorie Snacking, Tea Companion & Healthy Diet"
@@ -631,7 +631,7 @@ export const PRODUCTS = [
     startingPrice: 110,
     priceUnit: "250 g",
     description: "Vibrant crimson savory crackers made by kneading fresh organic beetroot purée into rice flour dough with spices.",
-    image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=700&q=80",
+    image: "https://ramadevifoods.com/cdn/shop/files/Artboard_1-1_9d8867a8-e038-4fd2-af3d-397e2ea5ac85.jpg?v=1770605557&width=1090",
     packOptions: ["250 g - ₹110", "500 g - ₹200", "1 kg - ₹380"],
     prices: { "250 g": 110, "500 g": 200, "1 kg": 380 },
     idealFor: "Nutritious Colorful Snacking for Kids & Guests"
@@ -647,7 +647,7 @@ export const PRODUCTS = [
     startingPrice: 110,
     priceUnit: "250 g",
     description: "Nutritious emerald-green chekkalu prepared with fresh farm spinach purée, cumin, and mild spices. Rich in iron and flavor.",
-    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=700&q=80",
+    image: "https://ramadevifoods.com/cdn/shop/files/Artboard_1-2_8885bc6b-8c6c-4528-9bb6-d496b20dd766.jpg?v=1770605557&width=600",
     packOptions: ["250 g - ₹110", "500 g - ₹200", "1 kg - ₹380"],
     prices: { "250 g": 110, "500 g": 200, "1 kg": 380 },
     idealFor: "Healthy Veggie Crunch, Tea Companion & Gifting"
@@ -667,7 +667,7 @@ export const PRODUCTS = [
     startingPrice: 160,
     priceUnit: "300 g",
     description: "The pride of Telugu cuisine: sour raw mangoes pickled with stone-ground mustard powder (aava pindi), Guntur red chili, garlic/hing, and cold-pressed oil.",
-    image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=700&q=80",
+    image: "/pickles.jpg",
     packOptions: ["300 g - ₹160", "500 g - ₹300", "1 kg - ₹550"],
     prices: { "300 g": 160, "500 g": 300, "1 kg": 550 },
     idealFor: "Hot Steamed Rice with Mudda Pappu & Pure Cow Ghee"
@@ -683,7 +683,7 @@ export const PRODUCTS = [
     startingPrice: 150,
     priceUnit: "300 g",
     description: "Sun-ripened tomatoes slow-cooked to a thick tang, blended with tamarind, roasted fenugreek, garlic, and aromatic mustard tempering.",
-    image: "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=700&q=80",
+    image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/01/tomato-pickle.jpg",
     packOptions: ["300 g - ₹150", "500 g - ₹250", "1 kg - ₹450"],
     prices: { "300 g": 150, "500 g": 250, "1 kg": 450 },
     idealFor: "Dosa, Idli, Upma & Steamed Rice"
@@ -699,7 +699,7 @@ export const PRODUCTS = [
     startingPrice: 150,
     priceUnit: "300 g",
     description: "Whole wild gooseberries pickled with mustard, fenugreek, and cold-pressed oil. Loaded with natural vitamin C and tangy goodness.",
-    image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=700&q=80",
+    image: "https://tulasipickles.com/wp-content/uploads/2024/11/Amla.jpg",
     packOptions: ["300 g - ₹150", "500 g - ₹250", "1 kg - ₹500"],
     prices: { "300 g": 150, "500 g": 250, "1 kg": 500 },
     idealFor: "Kartika Masam, Curd Rice & Daily Digestion"
@@ -715,7 +715,7 @@ export const PRODUCTS = [
     startingPrice: 150,
     priceUnit: "300 g",
     description: "Juicy country lemons cured in sea salt and turmeric, then seasoned with fiery chili powder and mustard oil tempering.",
-    image: "https://images.unsplash.com/photo-1534939561126-855b8675edd7?auto=format&fit=crop&w=700&q=80",
+    image: "https://andhrasfood.com/cdn/shop/files/IMG_2270.jpg?v=1742035629&width=1946",
     packOptions: ["300 g - ₹150", "500 g - ₹250", "1 kg - ₹510"],
     prices: { "300 g": 150, "500 g": 250, "1 kg": 510 },
     idealFor: "Curd Rice, Sick Day Comfort & Upma Pairing"
@@ -731,7 +731,7 @@ export const PRODUCTS = [
     startingPrice: 150,
     priceUnit: "300 g",
     description: "Crisp cauliflower florets pickled in traditional avakaya masala. Crunchy, savory, and wonderfully unique.",
-    image: "https://images.unsplash.com/photo-1568584711075-3d021a7c3ca3?auto=format&fit=crop&w=700&q=80",
+    image: "https://i.ytimg.com/vi/X9spzIiQVLM/maxresdefault.jpg",
     packOptions: ["300 g - ₹150", "500 g - ₹250", "1 kg - ₹450"],
     prices: { "300 g": 150, "500 g": 250, "1 kg": 450 },
     idealFor: "Chapati, Phulkas & Steamed Rice"
@@ -747,7 +747,7 @@ export const PRODUCTS = [
     startingPrice: 150,
     priceUnit: "300 g",
     description: "Freshly harvested sour sorrel leaves sautéed with red chilies, roasted cumin, garlic, and cold-pressed oil. The undisputed jewel of Telangana.",
-    image: "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=700&q=80",
+    image: "https://www.indianrecipeinfo.com/wp-content/uploads/2018/07/Gongura-pachadi.jpg",
     packOptions: ["300 g - ₹150", "500 g - ₹250", "1 kg - ₹450"],
     prices: { "300 g": 150, "500 g": 250, "1 kg": 450 },
     idealFor: "Hot Rice with Ghee, Jowar Roti & Onion Slice"
@@ -763,7 +763,7 @@ export const PRODUCTS = [
     startingPrice: 150,
     priceUnit: "300 g",
     description: "Fresh sweet farm carrots pickled in tangy mustard, fenugreek, and cold-pressed sesame oil. Crunchy and appetizing.",
-    image: "https://images.unsplash.com/photo-1582515073490-39981397c445?auto=format&fit=crop&w=700&q=80",
+    image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2023/07/carrot-pickle-gajar-ka-achar-768x1152.webp",
     packOptions: ["300 g - ₹150", "500 g - ₹250", "1 kg - ₹450"],
     prices: { "300 g": 150, "500 g": 250, "1 kg": 450 },
     idealFor: "Daily Meals, Parathas & Phulkas"
@@ -779,7 +779,7 @@ export const PRODUCTS = [
     startingPrice: 150,
     priceUnit: "300 g",
     description: "Crispy fried bittergourd slices tossed in a piquant blend of tamarind, jaggery, red chili, and mustard tempering. Perfect sweet-tangy-bitter balance.",
-    image: "https://images.unsplash.com/photo-1534483509719-3feaee7c30da?auto=format&fit=crop&w=700&q=80",
+    image: "https://images.tv9telugu.com/wp-content/uploads/2022/12/kakarakaya-nilva-pachadi.jpg",
     packOptions: ["300 g - ₹150", "500 g - ₹240", "1 kg - ₹500"],
     prices: { "300 g": 150, "500 g": 240, "1 kg": 500 },
     idealFor: "Healthy Digestion, Hot Rice & Diabetic Friendly"
@@ -795,7 +795,7 @@ export const PRODUCTS = [
     startingPrice: 160,
     priceUnit: "300 g",
     description: "Tender farm-fresh drumstick pieces pickled in rich, spicy mustard and tamarind gravy. Juicy, deeply flavored and aromatic.",
-    image: "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?auto=format&fit=crop&w=700&q=80",
+    image: "https://i.pinimg.com/736x/ca/7a/08/ca7a08c690e166302f15f494fb0a0a56.jpg",
     packOptions: ["300 g - ₹160", "500 g - ₹300", "1 kg - ₹550"],
     prices: { "300 g": 160, "500 g": 300, "1 kg": 550 },
     idealFor: "Special Sunday Feasts & Steamed Rice with Ghee"
@@ -815,7 +815,7 @@ export const PRODUCTS = [
     startingPrice: 150,
     priceUnit: "250 g",
     description: "Fragrant organic curry leaves slow-roasted and ground with lentils, dry chilies, cumin, and garlic. Packed with iron and antioxidants.",
-    image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=700&q=80",
+    image: "https://i.pinimg.com/736x/48/09/d2/4809d2df814d83f456efb8ccc99c58d0.jpg",
     packOptions: ["250 g - ₹150", "500 g - ₹300", "1 kg - ₹600"],
     prices: { "250 g": 150, "500 g": 300, "1 kg": 600 },
     idealFor: "Hot Steamed Rice with Desi Ghee & Idli-Dosa Sprinkle"
@@ -831,7 +831,7 @@ export const PRODUCTS = [
     startingPrice: 180,
     priceUnit: "250 g",
     description: "Slow-roasted peanuts ground with red chilies, cumin, and sea salt into a rich, nutty dry powder. Instant chutney maker.",
-    image: "https://images.unsplash.com/photo-1527515862127-a4fc05baf7a5?auto=format&fit=crop&w=700&q=80",
+    image: "https://i.ytimg.com/vi/FSeOenOMa64/maxresdefault.jpg",
     packOptions: ["250 g - ₹180", "500 g - ₹310", "1 kg - ₹600"],
     prices: { "250 g": 180, "500 g": 310, "1 kg": 600 },
     idealFor: "Hot Rice with Ghee, Jowar Roti & Quick Breakfast Dips"
@@ -847,7 +847,7 @@ export const PRODUCTS = [
     startingPrice: 150,
     priceUnit: "250 g",
     description: "Sun-dried fresh drumstick leaves (moringa) blended with roasted dal, cumin, garlic, and mild spices. Nature's superfood podi.",
-    image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=700&q=80",
+    image: "https://ahahomefoods.com/wp-content/uploads/2023/02/Munagaku-Podi.jpg",
     packOptions: ["250 g - ₹150", "500 g - ₹300", "1 kg - ₹600"],
     prices: { "250 g": 150, "500 g": 300, "1 kg": 600 },
     idealFor: "Daily Immunity, Iron Enrichment & Postpartum Nutrition"
@@ -863,7 +863,7 @@ export const PRODUCTS = [
     startingPrice: 120,
     priceUnit: "250 g",
     description: "Dehydrated pungent ginger roasted with dry red chilies, coriander seeds, and cumin. Stimulates appetite and digestion.",
-    image: "https://images.unsplash.com/photo-1509358271058-acd22cc93898?auto=format&fit=crop&w=700&q=80",
+    image: "https://batterbowl.in/wp-content/uploads/2024/06/idly-karampodi-scaled.jpg",
     packOptions: ["250 g - ₹120", "500 g - ₹240", "1 kg - ₹580"],
     prices: { "250 g": 120, "500 g": 240, "1 kg": 580 },
     idealFor: "Pesarattu, Idli, Cold & Cough Recovery"
@@ -879,7 +879,7 @@ export const PRODUCTS = [
     startingPrice: 150,
     priceUnit: "250 g",
     description: "Dehydrated sour gongura leaves pounded with roasted spices, garlic, and red chilies. Brings authentic tangy spice to every meal.",
-    image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=700&q=80",
+    image: "https://sreentr24foods.com/wp-content/uploads/2026/01/gongura-podi.jpg",
     packOptions: ["250 g - ₹150", "500 g - ₹300", "1 kg - ₹600"],
     prices: { "250 g": 150, "500 g": 300, "1 kg": 600 },
     idealFor: "Steamed Rice with Ghee, Travel & Lunchboxes"
@@ -895,7 +895,7 @@ export const PRODUCTS = [
     startingPrice: 150,
     priceUnit: "250 g",
     description: "Dry coconut copra slow-roasted with red chilies, garlic, and cumin. Rich, aromatic and deeply comforting.",
-    image: "https://images.unsplash.com/photo-1544378730-8b5104b18790?auto=format&fit=crop&w=700&q=80",
+    image: "https://mksweets.com/cdn/shop/files/KobbariKaramPodi.webp?v=1729593012&width=1445",
     packOptions: ["250 g - ₹150", "500 g - ₹300", "1 kg - ₹600"],
     prices: { "250 g": 150, "500 g": 300, "1 kg": 600 },
     idealFor: "Idli, Dosa, Hot Rice & Veggie Stir-Fry Seasoning"
@@ -911,7 +911,7 @@ export const PRODUCTS = [
     startingPrice: 170,
     priceUnit: "250 g",
     description: "Smooth roasted split gram (putnala pappu) seasoned with dry red chilies, cumin, and garlic. Mild, aromatic and kid-friendly.",
-    image: "https://images.unsplash.com/photo-1509358271058-acd22cc93898?auto=format&fit=crop&w=700&q=80",
+    image: "https://i.ytimg.com/vi/PriZRwQUWB8/maxresdefault.jpg",
     packOptions: ["250 g - ₹170", "500 g - ₹320", "1 kg - ₹640"],
     prices: { "250 g": 170, "500 g": 320, "1 kg": 640 },
     idealFor: "Ghee Dosa Sprinkle, Upma & Rice"
@@ -927,7 +927,7 @@ export const PRODUCTS = [
     startingPrice: 150,
     priceUnit: "250 g",
     description: "Toasted white & black sesame seeds pulverized with dry red chilies, garlic, and cumin. Warming, nutty, and high in calcium.",
-    image: "https://images.unsplash.com/photo-1514733670139-4d87a1941d55?auto=format&fit=crop&w=700&q=80",
+    image: "https://m.media-amazon.com/images/I/61l9NSyRbgL._SL1000_.jpg",
     packOptions: ["250 g - ₹150", "500 g - ₹300", "1 kg - ₹600"],
     prices: { "250 g": 150, "500 g": 300, "1 kg": 600 },
     idealFor: "Sankranti, Bone Health & Rice with Cold-Pressed Oil"
@@ -943,7 +943,7 @@ export const PRODUCTS = [
     startingPrice: 160,
     priceUnit: "250 g",
     description: "The classic Andhra & Telangana toor dal gunpowder: roasted lentils, peppercorns, cumin, and red chilies. Simply heavenly with hot ghee rice.",
-    image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=700&q=80",
+    image: "https://tulasipickles.com/wp-content/uploads/2024/11/Kandi-Podi.jpg",
     packOptions: ["250 g - ₹160", "500 g - ₹320", "1 kg - ₹640"],
     prices: { "250 g": 160, "500 g": 320, "1 kg": 640 },
     idealFor: "First Morsel of Steamed Rice with Pure Ghee"
@@ -963,7 +963,7 @@ export const PRODUCTS = [
     startingPrice: 6,
     priceUnit: "piece",
     description: "Handcrafted, pillowy soft 100% whole wheat phulkas cooked over direct flame. Zero oil, ultra-soft, and stays fresh for hours.",
-    image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=700&q=80",
+    image: "https://www.southindianfoods.in/gallery/phulka-step-by-step-photos/whole-wheat-phulka.jpg",
     packOptions: ["Pack of 25 - ₹150", "Pack of 50 - ₹300", "Pack of 100 - ₹580", "Daily Hostel Contract (500+)"],
     prices: { "Pack of 25": 150, "Pack of 50": 300, "Pack of 100": 580 },
     idealFor: "Hostels, Messes, Hotels, Corporate Tiffin Services & Parties"
@@ -979,7 +979,7 @@ export const PRODUCTS = [
     startingPrice: 8,
     priceUnit: "piece",
     description: "Traditional layered soft chapatis made from 100% stone-ground wheat flour with a gentle brush of pure oil or ghee.",
-    image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=700&q=80",
+    image: "https://www.mrishtanna.com/wp-content/uploads/2023/12/soft-chapati-recipe-1-720x720.jpg",
     packOptions: ["Pack of 25 - ₹200", "Pack of 50 - ₹400", "Pack of 100 - ₹750", "Bulk Catering Pack"],
     prices: { "Pack of 25": 200, "Pack of 50": 400, "Pack of 100": 750 },
     idealFor: "Lunchboxes, PG Messes, Hotel Buffets & House Functions"
@@ -995,7 +995,7 @@ export const PRODUCTS = [
     startingPrice: 12,
     priceUnit: "piece",
     description: "Authentic rustic Telangana Jonna Rotte hand-patted from freshly ground jowar (sorghum) flour. 100% gluten-free and nutritious.",
-    image: "https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=700&q=80",
+    image: "https://i.ytimg.com/vi/6q3PGkGhPUM/maxresdefault.jpg",
     packOptions: ["Pack of 10 - ₹120", "Pack of 25 - ₹300", "Pack of 50 - ₹580", "Monthly Mess Subscription"],
     prices: { "Pack of 10": 120, "Pack of 25": 300, "Pack of 50": 580 },
     idealFor: "Diabetic Friendly, Weight Loss, Traditional Curry Nights"
@@ -1011,7 +1011,7 @@ export const PRODUCTS = [
     startingPrice: 10,
     priceUnit: "piece",
     description: "Flavorful whole wheat flatbreads kneaded with fresh fenugreek (methi) leaves, turmeric, sesame, and yogurt. Stays fresh for 3 days.",
-    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=80",
+    image: "https://radiosargam.com.fj/wp-content/uploads/2022/06/ABD07939-1F47-4174-9B1D-F9FD34D32981.jpeg",
     packOptions: ["Pack of 15 - ₹150", "Pack of 30 - ₹300", "Pack of 60 - ₹580"],
     prices: { "Pack of 15": 150, "Pack of 30": 300, "Pack of 60": 580 },
     idealFor: "Long Journeys, College Hostels, Travel & Breakfast"
@@ -1031,7 +1031,7 @@ export const PRODUCTS = [
     startingPrice: 160,
     priceUnit: "500 g",
     description: "Sacred temple-style tamarind rice simmered with roasted peanuts, curry leaves, ginger, slit green chilies, and cold-pressed sesame oil.",
-    image: "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=700&q=80",
+    image: "https://i.ytimg.com/vi/hDz1MzBKP4s/maxresdefault.jpg",
     packOptions: ["500 g - ₹160", "1 kg - ₹300", "5 kg Temple/Event Tub", "10 kg Bulk Vessel"],
     prices: { "500 g": 160, "1 kg": 300 },
     idealFor: "Satyanarayana Vratams, Temple Offerings & Festivals"
@@ -1047,7 +1047,7 @@ export const PRODUCTS = [
     startingPrice: 180,
     priceUnit: "500 g",
     description: "Auspicious sweet rice and moong dal simmered in whole milk, infused with camphor, pure cow ghee, raisins, and roasted cashews.",
-    image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=700&q=80",
+    image: "https://i.pinimg.com/originals/6c/fa/0e/6cfa0e9e0c2568890ad47074cee4370f.jpg",
     packOptions: ["500 g - ₹180", "1 kg - ₹350", "Bulk Puja Vessel"],
     prices: { "500 g": 180, "1 kg": 350 },
     idealFor: "Gruhapravesam, Vratam Naivedyam & Annadanam"
@@ -1063,7 +1063,7 @@ export const PRODUCTS = [
     startingPrice: 150,
     priceUnit: "500 g",
     description: "Traditional tempered curd rice prepared with thick buffalo curd, milk, grated ginger, roasted mustard, curry leaves, and pomegranate pearls.",
-    image: "https://images.unsplash.com/photo-1536304929831-ee1ca9d44906?auto=format&fit=crop&w=700&q=80",
+    image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2016/10/Temple-curd-rice-recipe.webp",
     packOptions: ["500 g - ₹150", "1 kg - ₹280", "Bulk Temple Vessel"],
     prices: { "500 g": 150, "1 kg": 280 },
     idealFor: "Hanuman Temple Pooja, Summer Feasts & Vratam Seva"
@@ -1079,7 +1079,7 @@ export const PRODUCTS = [
     startingPrice: 150,
     priceUnit: "500 g",
     description: "Roasted fine semolina cooked with pure desi cow ghee, saffron strands, cardamom powder, and fried cashews. Melts instantly in the mouth.",
-    image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=700&q=80",
+    image: "https://i.ytimg.com/vi/ls-HMgXXLVk/maxresdefault.jpg",
     packOptions: ["500 g - ₹150", "1 kg - ₹290"],
     prices: { "500 g": 150, "1 kg": 290 },
     idealFor: "Daily Naivedyam, Birthday Poojas & Quick Celebrations"
@@ -1095,7 +1095,7 @@ export const PRODUCTS = [
     startingPrice: 140,
     priceUnit: "thali",
     description: "Wholesome daily meal: Sona Masoori rice, Telangana Pappu with cow ghee, seasonal vepudu, sambar, rasam, curd, and homemade pickle.",
-    image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=700&q=80",
+    image: "https://static.vecteezy.com/system/resources/previews/030/658/826/non_2x/indian-food-with-white-background-high-quality-ultra-free-photo.jpg",
     packOptions: ["Standard Thali - ₹140", "Special Ghee Thali - ₹180", "Monthly Lunch Subscription"],
     prices: { "Standard Thali": 140, "Special Ghee Thali": 180 },
     idealFor: "Daily Working Professionals, Elders & Pure Veg Diners"
@@ -1111,7 +1111,7 @@ export const PRODUCTS = [
     startingPrice: 420,
     priceUnit: "500 ml",
     description: "Traditional bilona-method golden cow ghee with fragrant granular (danedar) texture. Handcrafted with zero chemicals or mixing.",
-    image: "https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=700&q=80",
+    image: "https://veehafoods.com/cdn/shop/files/71Ki2xLYTXL._AC_UF894_1000_QL80_FMwebp.webp?crop=center&height=894&v=1733738720&width=894",
     packOptions: ["500 ml - ₹420", "1 Litre - ₹800", "5 Litre Puja Canister"],
     prices: { "500 ml": 420, "1 Litre": 800 },
     idealFor: "Daily Child Nutrition, Homa Rituals, Diya Lighting & Cooking"
@@ -1165,7 +1165,7 @@ export const SERVICES_DETAILED = [
     title: "Traditional Sweets (Mithai)",
     subtitle: "Pure Cow Ghee & Bellam Delicacies",
     tagline: "Hand-rolled with time-honored recipes for sacred celebrations.",
-    image: "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=700&q=80",
+    image: "/sweets.jpg",
     features: [
       "Pure Ghee Sunnundalu (Minapa Sunnunda)",
       "Traditional Bellam Ariselu & Sugar Ariselu",
@@ -1181,7 +1181,7 @@ export const SERVICES_DETAILED = [
     title: "Traditional Telangana Snacks",
     subtitle: "Authentic Savouries & Festive Chekkalu",
     tagline: "Zero artificial preservatives. Pure crispy homemade taste.",
-    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=700&q=80",
+    image: "/snacks.jpg",
     features: [
       "Authentic Telangana Sakinalu & Murukulu",
       "Pappu Chekkalu, Nuvvula & Palli Chekkalu",
@@ -1197,7 +1197,7 @@ export const SERVICES_DETAILED = [
     title: "Traditional Telugu Pickles (Nilva Pachallu)",
     subtitle: "Stone-Ground Mustard & Cold-Pressed Oil",
     tagline: "Authentic heritage recipes cured in sunlight.",
-    image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=700&q=80",
+    image: "/pickles.jpg",
     features: [
       "Royal Mango Avakaya with Cold-Pressed Oil",
       "Tangy Tomato Nilva Pachadi & Gongura Pickle",
@@ -1213,7 +1213,7 @@ export const SERVICES_DETAILED = [
     title: "Aromatic Homemade Podis",
     subtitle: "Fresh Roasted Karam & Chutney Podulu",
     tagline: "Prepared fresh in small batches with zero preservatives.",
-    image: "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=700&q=80",
+    image: "/podis.jpg",
     features: [
       "Signature Karivepaku (Curry Leaf) & Munagaku Podi",
       "Classic Kandi Podi (Toor Dal Gunpowder)",
@@ -1245,7 +1245,7 @@ export const SERVICES_DETAILED = [
     title: "Sacred Homemade Prasadams & Pure Veg Meals",
     subtitle: "Sattvic Temple Recipes & Homestyle Thalis",
     tagline: "Prepared in absolute madi (sacred purity) with pure cow ghee.",
-    image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=700&q=80",
+    image: "/prasadams.png",
     features: [
       "Temple-style Chintapandu Pulihora (Tamarind Rice)",
       "Sacred Chakkera Pongali with roasted cashews & raisins",
